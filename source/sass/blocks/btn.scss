@@ -1,26 +1,26 @@
-.btn {
-  display: inline-flex;
-  padding: 10px 20px;
+// .btn {
+//   display: inline-flex;
+//   padding: 10px 20px;
 
-  color: $color-default-white;
+//   color: $color-default-white;
 
-  background-color: $color-neon-blue;
-  border: none;
-  cursor: pointer;
+//   background-color: $color-neon-blue;
+//   border: none;
+//   cursor: pointer;
 
-  transition: opacity $trans-default;
+//   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
-  }
+//   &--red {
+//     background-color: $color-torch-red;
+//   }
 
-  &:disabled {
-    opacity: 0.5;
+//   &:disabled {
+//     opacity: 0.5;
 
-    pointer-events: none;
-  }
+//     pointer-events: none;
+//   }
 
-  @include hover-focus {
-    opacity: 0.8;
-  }
-}
+//   @include hover-focus {
+//     opacity: 0.8;
+//   }
+// }

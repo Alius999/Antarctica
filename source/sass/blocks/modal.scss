@@ -4,7 +4,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1;
 
   display: flex;
   flex-direction: column;
@@ -115,5 +115,22 @@
     opacity: 1;
 
     pointer-events: auto;
+  }
+}
+
+.modal__content {
+  max-width: 403px;
+  min-height: 455px;
+  background: $color-dark-text;
+  padding: 50px;
+  justify-self: end;
+
+  @include vp-1023 {
+    justify-self: center;
+    max-width: 100%;
+  }
+
+  @include vp-767 {
+    padding: 40px 38px;
   }
 }

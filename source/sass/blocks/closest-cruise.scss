@@ -1,0 +1,316 @@
+.closest-cruise {
+  background: $color-default-white;
+  color: $color-dark-text;
+  padding: 95px 0 120px;
+
+  @include vp-1023 {
+    padding: 100px 45px;
+  }
+
+  @include vp-767 {
+    padding: 65px 15px;
+  }
+}
+
+.closest-cruise h2 {
+  @include font-semibold;
+
+  font-size: 28px;
+  line-height: 42px;
+  letter-spacing: 0;
+  text-align: left;
+  text-align: center;
+  margin: 0 0 60px 0;
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 40px 0;
+  }
+}
+
+.closest-cruise__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1023 {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.closest-cruise__item {
+  max-width: 260px;
+  height: 386px;
+  background: $color-dark-text;
+  background-size: cover;
+  overflow: hidden;
+
+  @include vp-1023 {
+    max-width: 309px;
+  }
+}
+
+.webp .closest-cruise__item:nth-of-type(1) {
+  background: url(../img/webp/astoria.webp);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/webp/astoria@2x.webp) no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item:nth-of-type(1) {
+  background: url(../img/astoria.png);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/astoria@2x.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item:nth-of-type(2) {
+  background: url(../img/webp/astoria.webp);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/webp/astoria@2x.webp) no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item:nth-of-type(2) {
+  background: url(../img/astoria.png);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/astoria@2x.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item:nth-of-type(3) {
+  background: url(../img/webp/atlantis.webp);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/webp/atlantis@2x.webp) no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item:nth-of-type(3) {
+  background: url(../img/atlantis.png);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/atlantis@2x.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item:nth-of-type(4) {
+  background: url(../img/webp/odissey.webp);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/webp/odissey@2x.webp) no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item:nth-of-type(4) {
+  background: url(../img/odissey.png);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/odissey@2x.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item:nth-of-type(5) {
+  background: url(../img/webp/olimpus.webp);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/webp/olimpus@2x.webp) no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item:nth-of-type(5) {
+  background: url(../img/olimpus.png);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/olimpus@2x.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item:nth-of-type(6) {
+  background: url(../img/webp/avrora.webp);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/webp/avrora@2x.webp) no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item:nth-of-type(6) {
+  background: url(../img/avrora.png);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/avrora@2x.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item:nth-of-type(7) {
+  background: url(../img/webp/leonor.webp);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/webp/leonor@2x.webp) no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item:nth-of-type(7) {
+  background: url(../img/leonor.png);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/leonor@2x.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item:nth-of-type(8) {
+  background: url(../img/webp/minion.webp);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/webp/minion@2x.webp) no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item:nth-of-type(8) {
+  background: url(../img/minion.png);
+  background-size: cover;
+
+  @include retina {
+    background: url(../img/minion@2x.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.closest-cruise__item:hover {
+  .closest-cruise__item-second-card {
+    margin-top: -386px;
+    transition: 0.5s;
+  }
+}
+
+.closest-cruise__item-first-card h3 {
+  @include font-medium;
+
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $color-default-white;
+  margin: 0;
+  // display: block;
+  align-self: end;
+}
+
+.closest-cruise__item-first-card {
+  display: grid;
+  max-width: 260px;
+  height: 386px;
+  padding: 35px 25px;
+
+  @include vp-1023 {
+    max-width: 309px;
+  }
+}
+
+.closest-cruise__item-second-card {
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  transition: 0.5s;
+  max-width: 260px;
+  height: 386px;
+  padding: 35px 25px;
+  background: $color-dark-text;
+
+  @include vp-1023 {
+    max-width: 309px;
+  }
+}
+
+.closest-cruise__item-second-card h3,
+.closest-cruise__item-second-card p {
+  color: $color-default-white;
+}
+
+.closest-cruise__item-second-card h3 {
+  @include font-medium;
+
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.closest-cruise__item-second-card p {
+  @include font-regular;
+
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.closest-cruise__item-second-card p span {
+  @include font-medium;
+
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.closest-cruise__book-button {
+  @include font-semibold;
+
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0;
+  display: flex;
+  width: 210px;
+  height: 40px;
+  background: $color-default-white;
+  justify-content: center;
+  align-items: center;
+  color: $color-dark-text;
+}
+

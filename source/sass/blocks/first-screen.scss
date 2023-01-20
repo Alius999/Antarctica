@@ -1,0 +1,139 @@
+.first-screen {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  // background: url(../img/first-screen-bg.png) no-repeat;
+  background-size: cover;
+  // min-height: 650px;
+  margin-top: -116px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $color-default-white;
+  padding: 283px 0;
+
+  @include vp-1023 {
+    margin-top: -70px;
+    width: 100%;
+    padding: 0 45px;
+    min-height: 638px;
+  }
+
+  @include vp-767 {
+    margin-top: -60px;
+    padding: 0 15px;
+    min-height: 500px;
+  }
+}
+
+.webp .first-screen {
+  background-image: url("../img/webp/first-screen-bg.webp");
+  background-size: cover;
+  background-color: $color-dark-text;
+
+  @include vp-1024 {
+    @include retina {
+      background: url("../img/webp/first-screen-bg@2x.webp") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/webp/first-screen-bg-tab.webp");
+    background-size: cover;
+
+    @include retina {
+      background: url("../img/webp/first-screen-bg-tab@2x.webp") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/webp/first-screen-bg-mob.webp");
+    background-size: cover;
+
+    @include retina {
+      background: url("../img/webp/first-screen-bg-mob@2x.webp") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.no-webp .first-screen {
+  background-image: url("../img/first-screen-bg.png");
+  background-size: cover;
+  background-color: $color-dark-text;
+
+  @include vp-1024 {
+    @include retina {
+      background: url("../img/first-screen-bg@2x.png") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/first-screen-bg-tab.png");
+    background-size: cover;
+
+    @include retina {
+      background: url("../img/first-screen-bg-tab@2x.png") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/first-screen-bg-mob.png");
+    background-size: cover;
+
+    @include retina {
+      background: url("../img/first-screen-bg-mob@2x.png") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+
+
+.first-screen__text {
+  margin: 0 auto;
+  padding-right: 360px;
+
+  @include vp-1023 {
+    margin: 0;
+    padding-right: 0;
+  }
+}
+
+.first-screen h2 {
+  @include font-bold;
+
+  font-size: 54px;
+  line-height: 66px;
+  margin: 0;
+
+  @include vp-1023 {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.first-screen p {
+  @include font-regular;
+
+  font-size: 20px;
+  line-height: 24px;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}

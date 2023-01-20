@@ -1,0 +1,11 @@
+.socials {
+  justify-self: end;
+}
+
+.socials__link:not(:last-of-type) {
+  margin-right: 27px;
+}
+
+.socials__icon {
+  fill: $color-default-white;
+}

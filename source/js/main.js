@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+// import leafletjs from './js/leaflet';
 
 // ---------------------------------
 
@@ -19,6 +20,31 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
   });
 });
+
+const burgerIconOpen = document.querySelector('.header__burger-icon--open');
+const burgerIconClose = document.querySelector('.header__burger-icon--close');
+const headerList = document.querySelector('.header__list');
+const headerLogo = document.querySelector('.header__logo');
+
+burgerIconClose.addEventListener('click', () => {
+  burgerIconClose.style.display = 'none';
+  burgerIconOpen.style.display = 'block'
+  headerList.style.display = 'none';
+  headerLogo.style.fill = '#F9FBFD';
+  headerLogo.style.marginLeft = 0;
+})
+
+burgerIconOpen.addEventListener('click', () => {
+  burgerIconClose.style.display = 'block';
+  burgerIconOpen.style.display = 'none'
+  headerList.style.display = 'block';
+  headerLogo.style.fill = '#011C40';
+  headerLogo.style.marginLeft = 48;
+})
+
+// Map
+
+
 
 // ---------------------------------
 

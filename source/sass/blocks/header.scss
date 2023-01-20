@@ -1,0 +1,115 @@
+.header__container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1160px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  margin-top: 35px;
+  background: transparent;
+
+  @include vp-1023 {
+    width: 100%;
+    padding: 0 45px;
+    grid-template-columns: 1fr 6fr;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 0 15px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.header__logo {
+  fill: $top-logo-color;
+
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.header__list {
+  display: flex;
+  justify-self: end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @include vp-767 {
+    display: none;
+    top: -35px;
+    padding: 65px 0 0 25px;
+    height: calc(100vh + 35px);
+    width: calc(100vw - 35px);
+    position: absolute;
+    flex-direction: column;
+    background: $color-default-white;
+  }
+}
+
+.header__burger-icon {
+  display: none;
+
+  @include vp-767 {
+    justify-self: end;
+    display: block;
+  }
+}
+
+.header__burger-icon--open {
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.header__burger-icon--close {
+  @include vp-767 {
+    display: none;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.header__item {
+  margin-right: 33px;
+
+  @include vp-1023 {
+    margin-right: 23px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 28px 0;
+  }
+}
+
+.header__item:last-of-type {
+  margin-right: 0;
+}
+
+.header__link {
+  @include font-medium;
+
+  color: $color-default-white;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-dark-text;
+  }
+}

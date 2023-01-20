@@ -62,6 +62,12 @@
   }
 }
 
+@mixin vp-1024 {
+  @media (min-width: $vp-1024) {
+    @content;
+  }
+}
+
 @mixin vp-767 {
   @media (max-width: ($vp-768 - 1px)) {
     @content;
@@ -72,6 +78,40 @@
   @media (max-width: ($vp-375 - 1px)) {
     @content;
   }
+}
+
+// Background mixins
+
+@mixin retina {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+// Fonts
+
+@mixin font-bold {
+  font-family: $common-font, $reserve, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin font-semibold {
+  font-family: $common-font, $reserve, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin font-medium {
+  font-family: $common-font, $reserve, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin font-regular {
+  font-family: $common-font, $reserve, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 // Mobile first
