@@ -24,8 +24,8 @@ $(function () {
         begin: new RegExp('\\b' + searchTerm), // Begin matches word boundary
         baseName: new RegExp('\\b' + searchTerm + '[^/]*$'), // Begin matches word boundary of class / module name
         fullName: new RegExp('\\b' + searchTerm + '(?:[~.]|$)'), // Complete word(s) of class / module matches
-        completeName: new RegExp('^' + searchTerm + '$') // Match from start to finish
-      }
+        completeName: new RegExp('^' + searchTerm + '$'), // Match from start to finish
+      };
     }
     const re = constructRegex(searchTerm, makeRe, allowRegex);
     return function (matchedItem, beginOnly) {
@@ -49,7 +49,7 @@ $(function () {
         }
       }
       return weight;
-    }
+    };
   }
 
   const search = (function () {
@@ -103,31 +103,31 @@ $(function () {
     });
 
     return {
-      $navList: $navList,
+      $navList,
       $currentItem: initialCurrent ? $(initialCurrent) : undefined,
       lastSearchTerm: undefined,
       lastState: {},
       lastClasses: undefined,
-      getClassList: function () {
+      getClassList() {
         return $classItems || ($classItems = $navList.find('li.item'));
       },
-      getMembers: function () {
+      getMembers() {
         return $members || ($members = $navList.find('.item li'));
       },
-      changeStateClass: function (newClass) {
+      changeStateClass(newClass) {
         if (newClass !== stateClass) {
           navListNode.classList.remove(stateClass);
           navListNode.classList.add(newClass);
           stateClass = newClass;
         }
       },
-      manualToggle: function ($node, show) {
+      manualToggle($node, show) {
         $node.addClass('toggle-manual');
         $node.toggleClass('toggle-manual-hide', !show);
         $node.toggleClass('toggle-manual-show', show);
         manualToggles[$node.data('longname')] = $node;
       },
-      clearManualToggles: function() {
+      clearManualToggles() {
         for (let clsName in manualToggles) {
           manualToggles[clsName].removeClass('toggle-manual toggle-manual-show toggle-manual-hide');
         }
@@ -190,7 +190,7 @@ $(function () {
             item: classEntry,
             // Do the weight thing
             weight: getSearchWeight(classEntry, beginOnly) * 100000,
-            subItems: {}
+            subItems: {},
           };
           classes.push(cls);
           classEntry.classList.add('match');
@@ -207,7 +207,7 @@ $(function () {
             cls = searchState[className] = {
               item: classEntry,
               weight: 0,
-              subItems: {}
+              subItems: {},
             };
             classes.push(cls);
             classEntry.classList.add('match');
@@ -218,11 +218,11 @@ $(function () {
           if (!members) {
             members = cls.subItems[memberType] = {
               item: itemMember,
-              subItems: {}
+              subItems: {},
             };
             itemMember.classList.add('match');
           }
-          members.subItems[name] = { item: li };
+          members.subItems[name] = {item: li};
           li.classList.add('match');
         }
       });
@@ -254,7 +254,7 @@ $(function () {
 
   // Search Items
   searchInput.addEventListener('input', queueSearch);
-  searchInput.addEventListener('keydown', function(e) {
+  searchInput.addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
       doSearch(searchInput.value);
       const first = search.lastClasses ? search.lastClasses[0].item : null;
@@ -279,9 +279,9 @@ $(function () {
   // warn about outdated version
   const currentVersion = document.getElementById('package-version').innerHTML;
   const releaseUrl = 'https://cdn.jsdelivr.net/npm/ol/package.json';
-  fetch(releaseUrl).then(function(response) {
+  fetch(releaseUrl).then(function (response) {
     return response.json();
-  }).then(function(json) {
+  }).then(function (json) {
     const latestVersion = json.version;
     document.getElementById('latest-version').innerHTML = latestVersion;
     const url = window.location.href;
@@ -290,16 +290,16 @@ $(function () {
     const dismissed = localStorage.getItem(storageKey) === 'true';
     if (branchSearch && !dismissed && /^v[0-9\.]*$/.test(branchSearch[1]) && currentVersion != latestVersion) {
       const link = url.replace(branchSearch[0], '/latest/apidoc/');
-      fetch(link, {method: 'head'}).then(function(response) {
+      fetch(link, {method: 'head'}).then(function (response) {
         const a = document.getElementById('latest-link');
         a.href = response.status == 200 ? link : '../../latest/apidoc/';
       });
       const latestCheck = document.getElementById('latest-check');
       latestCheck.style.display = '';
-      document.getElementById('latest-dismiss').onclick = function() {
+      document.getElementById('latest-dismiss').onclick = function () {
         latestCheck.style.display = 'none';
         localStorage.setItem(storageKey, 'true');
-      }
+      };
     }
   });
 });

@@ -18,7 +18,6 @@
   font-size: 28px;
   line-height: 42px;
   letter-spacing: 0;
-  text-align: left;
   text-align: center;
   margin: 0 0 60px 0;
 
@@ -62,161 +61,161 @@
 }
 
 .webp .closest-cruise__item:nth-of-type(1) {
-  background: url(../img/webp/astoria.webp);
+  background: url("../img/webp/astoria.webp");
   background-size: cover;
 
   @include retina {
-    background: url(../img/webp/astoria@2x.webp) no-repeat;
+    background: url("../img/webp/astoria@2x.webp") no-repeat;
     background-size: cover;
   }
 }
 
 .no-webp .closest-cruise__item:nth-of-type(1) {
-  background: url(../img/astoria.png);
+  background: url("../img/astoria.png");
   background-size: cover;
 
   @include retina {
-    background: url(../img/astoria@2x.png) no-repeat;
+    background: url("../img/astoria@2x.png") no-repeat;
     background-size: cover;
   }
 }
 
 .webp .closest-cruise__item:nth-of-type(2) {
-  background: url(../img/webp/astoria.webp);
+  background: url("../img/webp/astoria.webp");
   background-size: cover;
 
   @include retina {
-    background: url(../img/webp/astoria@2x.webp) no-repeat;
+    background: url("../img/webp/astoria@2x.webp") no-repeat;
     background-size: cover;
   }
 }
 
 .no-webp .closest-cruise__item:nth-of-type(2) {
-  background: url(../img/astoria.png);
+  background: url("../img/astoria.png");
   background-size: cover;
 
   @include retina {
-    background: url(../img/astoria@2x.png) no-repeat;
+    background: url("../img/astoria@2x.png") no-repeat;
     background-size: cover;
   }
 }
 
 .webp .closest-cruise__item:nth-of-type(3) {
-  background: url(../img/webp/atlantis.webp);
+  background: url("../img/webp/atlantis.webp");
   background-size: cover;
 
   @include retina {
-    background: url(../img/webp/atlantis@2x.webp) no-repeat;
+    background: url("../img/webp/atlantis@2x.webp") no-repeat;
     background-size: cover;
   }
 }
 
 .no-webp .closest-cruise__item:nth-of-type(3) {
-  background: url(../img/atlantis.png);
+  background: url("../img/atlantis.png");
   background-size: cover;
 
   @include retina {
-    background: url(../img/atlantis@2x.png) no-repeat;
+    background: url("../img/atlantis@2x.png") no-repeat;
     background-size: cover;
   }
 }
 
 .webp .closest-cruise__item:nth-of-type(4) {
-  background: url(../img/webp/odissey.webp);
+  background: url("../img/webp/odissey.webp");
   background-size: cover;
 
   @include retina {
-    background: url(../img/webp/odissey@2x.webp) no-repeat;
+    background: url("../img/webp/odissey@2x.webp") no-repeat;
     background-size: cover;
   }
 }
 
 .no-webp .closest-cruise__item:nth-of-type(4) {
-  background: url(../img/odissey.png);
+  background: url("../img/odissey.png");
   background-size: cover;
 
   @include retina {
-    background: url(../img/odissey@2x.png) no-repeat;
+    background: url("../img/odissey@2x.png") no-repeat;
     background-size: cover;
   }
 }
 
 .webp .closest-cruise__item:nth-of-type(5) {
-  background: url(../img/webp/olimpus.webp);
+  background: url("../img/webp/olimpus.webp");
   background-size: cover;
 
   @include retina {
-    background: url(../img/webp/olimpus@2x.webp) no-repeat;
+    background: url("../img/webp/olimpus@2x.webp") no-repeat;
     background-size: cover;
   }
 }
 
 .no-webp .closest-cruise__item:nth-of-type(5) {
-  background: url(../img/olimpus.png);
+  background: url("../img/olimpus.png");
   background-size: cover;
 
   @include retina {
-    background: url(../img/olimpus@2x.png) no-repeat;
+    background: url("../img/olimpus@2x.png") no-repeat;
     background-size: cover;
   }
 }
 
 .webp .closest-cruise__item:nth-of-type(6) {
-  background: url(../img/webp/avrora.webp);
+  background: url("../img/webp/avrora.webp");
   background-size: cover;
 
   @include retina {
-    background: url(../img/webp/avrora@2x.webp) no-repeat;
+    background: url("../img/webp/avrora@2x.webp") no-repeat;
     background-size: cover;
   }
 }
 
 .no-webp .closest-cruise__item:nth-of-type(6) {
-  background: url(../img/avrora.png);
+  background: url("../img/avrora.png");
   background-size: cover;
 
   @include retina {
-    background: url(../img/avrora@2x.png) no-repeat;
+    background: url("../img/avrora@2x.png") no-repeat;
     background-size: cover;
   }
 }
 
 .webp .closest-cruise__item:nth-of-type(7) {
-  background: url(../img/webp/leonor.webp);
+  background: url("../img/webp/leonor.webp");
   background-size: cover;
 
   @include retina {
-    background: url(../img/webp/leonor@2x.webp) no-repeat;
+    background: url("../img/webp/leonor@2x.webp") no-repeat;
     background-size: cover;
   }
 }
 
 .no-webp .closest-cruise__item:nth-of-type(7) {
-  background: url(../img/leonor.png);
+  background: url("../img/leonor.png");
   background-size: cover;
 
   @include retina {
-    background: url(../img/leonor@2x.png) no-repeat;
+    background: url("../img/leonor@2x.png") no-repeat;
     background-size: cover;
   }
 }
 
 .webp .closest-cruise__item:nth-of-type(8) {
-  background: url(../img/webp/minion.webp);
+  background: url("../img/webp/minion.webp");
   background-size: cover;
 
   @include retina {
-    background: url(../img/webp/minion@2x.webp) no-repeat;
+    background: url("../img/webp/minion@2x.webp") no-repeat;
     background-size: cover;
   }
 }
 
 .no-webp .closest-cruise__item:nth-of-type(8) {
-  background: url(../img/minion.png);
+  background: url("../img/minion.png");
   background-size: cover;
 
   @include retina {
-    background: url(../img/minion@2x.png) no-repeat;
+    background: url("../img/minion@2x.png") no-repeat;
     background-size: cover;
   }
 }
