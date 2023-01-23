@@ -49,6 +49,7 @@
 }
 
 .closest-cruise__item {
+  position: relative;
   max-width: 260px;
   height: 386px;
   background: $color-dark-text;
@@ -60,174 +61,14 @@
   }
 }
 
-.webp .closest-cruise__item:nth-of-type(1) {
-  background: url("../img/webp/astoria.webp");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/webp/astoria@2x.webp") no-repeat;
-    background-size: cover;
-  }
-}
-
-.no-webp .closest-cruise__item:nth-of-type(1) {
-  background: url("../img/astoria.png");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/astoria@2x.png") no-repeat;
-    background-size: cover;
-  }
-}
-
-.webp .closest-cruise__item:nth-of-type(2) {
-  background: url("../img/webp/astoria.webp");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/webp/astoria@2x.webp") no-repeat;
-    background-size: cover;
-  }
-}
-
-.no-webp .closest-cruise__item:nth-of-type(2) {
-  background: url("../img/astoria.png");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/astoria@2x.png") no-repeat;
-    background-size: cover;
-  }
-}
-
-.webp .closest-cruise__item:nth-of-type(3) {
-  background: url("../img/webp/atlantis.webp");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/webp/atlantis@2x.webp") no-repeat;
-    background-size: cover;
-  }
-}
-
-.no-webp .closest-cruise__item:nth-of-type(3) {
-  background: url("../img/atlantis.png");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/atlantis@2x.png") no-repeat;
-    background-size: cover;
-  }
-}
-
-.webp .closest-cruise__item:nth-of-type(4) {
-  background: url("../img/webp/odissey.webp");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/webp/odissey@2x.webp") no-repeat;
-    background-size: cover;
-  }
-}
-
-.no-webp .closest-cruise__item:nth-of-type(4) {
-  background: url("../img/odissey.png");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/odissey@2x.png") no-repeat;
-    background-size: cover;
-  }
-}
-
-.webp .closest-cruise__item:nth-of-type(5) {
-  background: url("../img/webp/olimpus.webp");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/webp/olimpus@2x.webp") no-repeat;
-    background-size: cover;
-  }
-}
-
-.no-webp .closest-cruise__item:nth-of-type(5) {
-  background: url("../img/olimpus.png");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/olimpus@2x.png") no-repeat;
-    background-size: cover;
-  }
-}
-
-.webp .closest-cruise__item:nth-of-type(6) {
-  background: url("../img/webp/avrora.webp");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/webp/avrora@2x.webp") no-repeat;
-    background-size: cover;
-  }
-}
-
-.no-webp .closest-cruise__item:nth-of-type(6) {
-  background: url("../img/avrora.png");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/avrora@2x.png") no-repeat;
-    background-size: cover;
-  }
-}
-
-.webp .closest-cruise__item:nth-of-type(7) {
-  background: url("../img/webp/leonor.webp");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/webp/leonor@2x.webp") no-repeat;
-    background-size: cover;
-  }
-}
-
-.no-webp .closest-cruise__item:nth-of-type(7) {
-  background: url("../img/leonor.png");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/leonor@2x.png") no-repeat;
-    background-size: cover;
-  }
-}
-
-.webp .closest-cruise__item:nth-of-type(8) {
-  background: url("../img/webp/minion.webp");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/webp/minion@2x.webp") no-repeat;
-    background-size: cover;
-  }
-}
-
-.no-webp .closest-cruise__item:nth-of-type(8) {
-  background: url("../img/minion.png");
-  background-size: cover;
-
-  @include retina {
-    background: url("../img/minion@2x.png") no-repeat;
-    background-size: cover;
-  }
-}
-
 .closest-cruise__item:hover {
   .closest-cruise__item-second-card {
-    margin-top: -386px;
+    top: 0;
     transition: 0.5s;
   }
 }
 
-.closest-cruise__item-first-card h3 {
+.closest-cruise__item h3 {
   @include font-medium;
 
   font-size: 18px;
@@ -236,25 +77,17 @@
   text-align: left;
   color: $color-default-white;
   margin: 0;
-  // display: block;
-  align-self: end;
-}
-
-.closest-cruise__item-first-card {
-  display: grid;
-  max-width: 260px;
-  height: 386px;
   padding: 35px 25px;
-
-  @include vp-1023 {
-    max-width: 309px;
-  }
+  display: grid;
+  align-content: end;
+  width: 100%;
+  height: 100%;
 }
 
 .closest-cruise__item-second-card {
-  position: relative;
-  z-index: 1;
-  margin-top: 0;
+  position: absolute;
+  z-index: 2;
+  top: 100%;
   transition: 0.5s;
   max-width: 260px;
   height: 386px;
@@ -313,3 +146,162 @@
   color: $color-dark-text;
 }
 
+.webp .closest-cruise__item--first {
+  background: url("../img/webp/astoria.webp");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/webp/astoria@2x.webp") no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item--first {
+  background: url("../img/astoria.png");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/astoria@2x.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item--second {
+  background: url("../img/webp/astoria.webp");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/webp/astoria@2x.webp") no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item--second {
+  background: url("../img/astoria.png");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/astoria@2x.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item--third {
+  background: url("../img/webp/atlantis.webp");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/webp/atlantis@2x.webp") no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item--third {
+  background: url("../img/atlantis.png");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/atlantis@2x.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item--fourth {
+  background: url("../img/webp/odissey.webp");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/webp/odissey@2x.webp") no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item--fourth {
+  background: url("../img/odissey.png");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/odissey@2x.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item--fifth {
+  background: url("../img/webp/olimpus.webp");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/webp/olimpus@2x.webp") no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item--fifth {
+  background: url("../img/olimpus.png");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/olimpus@2x.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item--sixth {
+  background: url("../img/webp/avrora.webp");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/webp/avrora@2x.webp") no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .cclosest-cruise__item--sixth {
+  background: url("../img/avrora.png");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/avrora@2x.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item--seventh {
+  background: url("../img/webp/leonor.webp");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/webp/leonor@2x.webp") no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item--seventh {
+  background: url("../img/leonor.png");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/leonor@2x.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .closest-cruise__item--eighth {
+  background: url("../img/webp/minion.webp");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/webp/minion@2x.webp") no-repeat;
+    background-size: cover;
+  }
+}
+
+.no-webp .closest-cruise__item--eighth {
+  background: url("../img/minion.png");
+  background-size: cover;
+
+  @include retina {
+    background: url("../img/minion@2x.png") no-repeat;
+    background-size: cover;
+  }
+}
