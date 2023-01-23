@@ -21,10 +21,8 @@
   },
   "editorconfig-cli": [
     "*.json",
-    "*.js",
-    "source/**/*.html",
-    "source/**/*.pug",
-    "source/js/**/*.js",
+    "source/*.html",
+    "source/js/*.js",
     "source/img/**/*.svg",
     "source/sass/**/*.{sass,scss}"
   ],

@@ -671,6 +671,15 @@ button,
   scrollbar-width: none;
 }
 
+.modal .modal__content {
+  max-width: 403px;
+  min-height: 455px;
+  background: #011c40;
+  padding: 50px;
+  -ms-grid-column-align: end;
+  justify-self: end;
+}
+
 .modal::-webkit-scrollbar {
   display: none;
 }
@@ -751,15 +760,6 @@ button,
   pointer-events: auto;
 }
 
-.modal__content {
-  max-width: 403px;
-  min-height: 455px;
-  background: #011C40;
-  padding: 50px;
-  -ms-grid-column-align: end;
-  justify-self: end;
-}
-
 .header__container {
   position: relative;
   margin: 0 auto;
@@ -776,7 +776,7 @@ button,
 }
 
 .header__logo {
-  fill: #F9FBFD;
+  fill: #f9fbfd;
 }
 
 .header__list {
@@ -834,13 +834,13 @@ button,
 .webp .first-screen {
   background-image: url("../img/webp/first-screen-bg.webp");
   background-size: cover;
-  background-color: #011C40;
+  background-color: #011c40;
 }
 
 .no-webp .first-screen {
   background-image: url("../img/first-screen-bg.png");
   background-size: cover;
-  background-color: #011C40;
+  background-color: #011c40;
 }
 
 .first-screen__text {
@@ -875,7 +875,7 @@ button,
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  color: #011C40;
+  color: #011c40;
   padding: 130px 103px 145px;
 }
 
@@ -903,20 +903,20 @@ button,
 }
 
 .advantages {
-  color: #011C40;
+  color: #011c40;
   padding: 120px 103px;
 }
 
 .webp .advantages {
   background-image: url("../img/webp/advantages.webp");
   background-size: cover;
-  background-color: #011C40;
+  background-color: #011c40;
 }
 
 .no-webp .advantages {
   background-image: url("../img/advantages.png");
   background-size: cover;
-  background-color: #011C40;
+  background-color: #011c40;
 }
 
 .advantages h2 {
@@ -926,7 +926,6 @@ button,
   font-size: 28px;
   line-height: 42px;
   letter-spacing: 0;
-  text-align: left;
   text-align: center;
   margin: 0 0 60px 0;
 }
@@ -973,7 +972,7 @@ button,
 
 .closest-cruise {
   background: #ffffff;
-  color: #011C40;
+  color: #011c40;
   padding: 95px 0 120px;
 }
 
@@ -984,7 +983,6 @@ button,
   font-size: 28px;
   line-height: 42px;
   letter-spacing: 0;
-  text-align: left;
   text-align: center;
   margin: 0 0 60px 0;
 }
@@ -1002,101 +1000,22 @@ button,
 }
 
 .closest-cruise__item {
+  position: relative;
   max-width: 260px;
   height: 386px;
-  background: #011C40;
+  background: #011c40;
   background-size: cover;
   overflow: hidden;
 }
 
-.webp .closest-cruise__item:nth-of-type(1) {
-  background: url(../img/webp/astoria.webp);
-  background-size: cover;
-}
-
-.no-webp .closest-cruise__item:nth-of-type(1) {
-  background: url(../img/astoria.png);
-  background-size: cover;
-}
-
-.webp .closest-cruise__item:nth-of-type(2) {
-  background: url(../img/webp/astoria.webp);
-  background-size: cover;
-}
-
-.no-webp .closest-cruise__item:nth-of-type(2) {
-  background: url(../img/astoria.png);
-  background-size: cover;
-}
-
-.webp .closest-cruise__item:nth-of-type(3) {
-  background: url(../img/webp/atlantis.webp);
-  background-size: cover;
-}
-
-.no-webp .closest-cruise__item:nth-of-type(3) {
-  background: url(../img/atlantis.png);
-  background-size: cover;
-}
-
-.webp .closest-cruise__item:nth-of-type(4) {
-  background: url(../img/webp/odissey.webp);
-  background-size: cover;
-}
-
-.no-webp .closest-cruise__item:nth-of-type(4) {
-  background: url(../img/odissey.png);
-  background-size: cover;
-}
-
-.webp .closest-cruise__item:nth-of-type(5) {
-  background: url(../img/webp/olimpus.webp);
-  background-size: cover;
-}
-
-.no-webp .closest-cruise__item:nth-of-type(5) {
-  background: url(../img/olimpus.png);
-  background-size: cover;
-}
-
-.webp .closest-cruise__item:nth-of-type(6) {
-  background: url(../img/webp/avrora.webp);
-  background-size: cover;
-}
-
-.no-webp .closest-cruise__item:nth-of-type(6) {
-  background: url(../img/avrora.png);
-  background-size: cover;
-}
-
-.webp .closest-cruise__item:nth-of-type(7) {
-  background: url(../img/webp/leonor.webp);
-  background-size: cover;
-}
-
-.no-webp .closest-cruise__item:nth-of-type(7) {
-  background: url(../img/leonor.png);
-  background-size: cover;
-}
-
-.webp .closest-cruise__item:nth-of-type(8) {
-  background: url(../img/webp/minion.webp);
-  background-size: cover;
-}
-
-.no-webp .closest-cruise__item:nth-of-type(8) {
-  background: url(../img/minion.png);
-  background-size: cover;
-}
-
 .closest-cruise__item:hover .closest-cruise__item-second-card {
-  margin-top: -386px;
+  top: 0;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
-.closest-cruise__item-first-card h3 {
+.closest-cruise__item h3 {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -1106,30 +1025,26 @@ button,
   text-align: left;
   color: #ffffff;
   margin: 0;
-  -ms-flex-item-align: end;
-  -ms-grid-row-align: end;
-  align-self: end;
-}
-
-.closest-cruise__item-first-card {
+  padding: 35px 25px;
   display: -ms-grid;
   display: grid;
-  max-width: 260px;
-  height: 386px;
-  padding: 35px 25px;
+  -ms-flex-line-pack: end;
+  align-content: end;
+  width: 100%;
+  height: 100%;
 }
 
 .closest-cruise__item-second-card {
-  position: relative;
-  z-index: 1;
-  margin-top: 0;
+  position: absolute;
+  z-index: 2;
+  top: 100%;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
   max-width: 260px;
   height: 386px;
   padding: 35px 25px;
-  background: #011C40;
+  background: #011c40;
 }
 
 .closest-cruise__item-second-card h3,
@@ -1186,7 +1101,87 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #011C40;
+  color: #011c40;
+}
+
+.webp .closest-cruise__item--first {
+  background: url("../img/webp/astoria.webp");
+  background-size: cover;
+}
+
+.no-webp .closest-cruise__item--first {
+  background: url("../img/astoria.png");
+  background-size: cover;
+}
+
+.webp .closest-cruise__item--second {
+  background: url("../img/webp/astoria.webp");
+  background-size: cover;
+}
+
+.no-webp .closest-cruise__item--second {
+  background: url("../img/astoria.png");
+  background-size: cover;
+}
+
+.webp .closest-cruise__item--third {
+  background: url("../img/webp/atlantis.webp");
+  background-size: cover;
+}
+
+.no-webp .closest-cruise__item--third {
+  background: url("../img/atlantis.png");
+  background-size: cover;
+}
+
+.webp .closest-cruise__item--fourth {
+  background: url("../img/webp/odissey.webp");
+  background-size: cover;
+}
+
+.no-webp .closest-cruise__item--fourth {
+  background: url("../img/odissey.png");
+  background-size: cover;
+}
+
+.webp .closest-cruise__item--fifth {
+  background: url("../img/webp/olimpus.webp");
+  background-size: cover;
+}
+
+.no-webp .closest-cruise__item--fifth {
+  background: url("../img/olimpus.png");
+  background-size: cover;
+}
+
+.webp .closest-cruise__item--sixth {
+  background: url("../img/webp/avrora.webp");
+  background-size: cover;
+}
+
+.no-webp .cclosest-cruise__item--sixth {
+  background: url("../img/avrora.png");
+  background-size: cover;
+}
+
+.webp .closest-cruise__item--seventh {
+  background: url("../img/webp/leonor.webp");
+  background-size: cover;
+}
+
+.no-webp .closest-cruise__item--seventh {
+  background: url("../img/leonor.png");
+  background-size: cover;
+}
+
+.webp .closest-cruise__item--eighth {
+  background: url("../img/webp/minion.webp");
+  background-size: cover;
+}
+
+.no-webp .closest-cruise__item--eighth {
+  background: url("../img/minion.png");
+  background-size: cover;
 }
 
 .booking {
@@ -1196,13 +1191,13 @@ button,
 .webp .booking {
   background-image: url("../img/webp/booking-bg.webp");
   background-size: cover;
-  background-color: #011C40;
+  background-color: #011c40;
 }
 
 .no-webp .booking {
   background-image: url("../img/booking-bg.png");
   background-size: cover;
-  background-color: #011C40;
+  background-color: #011c40;
 }
 
 .booking__container {
@@ -1235,7 +1230,7 @@ button,
   line-height: 60px;
   letter-spacing: 0;
   text-align: left;
-  color: #011C40;
+  color: #011c40;
   margin: 0;
 }
 
@@ -1247,7 +1242,7 @@ button,
   line-height: 27px;
   letter-spacing: 0;
   text-align: left;
-  color: #011C40;
+  color: #011c40;
   margin: 0;
   display: block;
   max-width: 400px;
@@ -1256,7 +1251,7 @@ button,
 .booking__form {
   max-width: 403px;
   min-height: 455px;
-  background: #011C40;
+  background: #011c40;
   padding: 50px;
   -ms-grid-column-align: end;
   justify-self: end;
@@ -1285,7 +1280,7 @@ button,
   width: 100%;
   height: 42px;
   padding: 11px 16px;
-  color: #011C40;
+  color: #011c40;
   margin-bottom: 20px;
 }
 
@@ -1342,7 +1337,6 @@ button,
   -webkit-transform: translate(0, 42%);
   -ms-transform: translate(0, 42%);
   transform: translate(0, 42%);
-  background: transparent;
   width: 15px;
   height: 14px;
   border: 1px solid #ffffff;
@@ -1373,7 +1367,7 @@ button,
   line-height: 21px;
   letter-spacing: 0;
   text-align: left;
-  color: #011C40;
+  color: #011c40;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -1401,7 +1395,7 @@ button,
   grid-template-columns: 1fr 1fr;
   max-width: 1160px;
   margin: 0 auto;
-  color: #011C40;
+  color: #011c40;
 }
 
 .contacts__text {
@@ -1450,7 +1444,7 @@ button,
 }
 
 .footer {
-  background: #011C40;
+  background: #011c40;
   padding: 50px 0;
 }
 
@@ -1526,7 +1520,7 @@ button,
   width: 100%;
   height: 42px;
   padding: 11px 16px;
-  color: #011C40;
+  color: #011c40;
   margin-bottom: 20px;
 }
 
@@ -1578,7 +1572,6 @@ button,
   -webkit-transform: translate(0, 42%);
   -ms-transform: translate(0, 42%);
   transform: translate(0, 42%);
-  background: transparent;
   width: 15px;
   height: 14px;
   border: 1px solid #ffffff;
@@ -1610,7 +1603,7 @@ button,
   line-height: 21px;
   letter-spacing: 0;
   text-align: left;
-  color: #011C40;
+  color: #011c40;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -1710,7 +1703,7 @@ button,
     padding: 0 24px;
   }
 
-  .modal__content {
+  .modal .modal__content {
     -ms-grid-column-align: center;
     justify-self: center;
     max-width: 100%;
@@ -1826,10 +1819,6 @@ button,
   }
 
   .closest-cruise__item {
-    max-width: 309px;
-  }
-
-  .closest-cruise__item-first-card {
     max-width: 309px;
   }
 
@@ -1972,6 +1961,10 @@ button,
     padding: 0 16px;
   }
 
+  .modal .modal__content {
+    padding: 40px 38px;
+  }
+
   .modal__wrapper {
     padding: 60px 16px;
   }
@@ -1983,10 +1976,6 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
-  }
-
-  .modal__content {
-    padding: 40px 38px;
   }
 
   .header__container {
@@ -2038,7 +2027,7 @@ button,
   .header__link {
     font-size: 18px;
     line-height: 22px;
-    color: #011C40;
+    color: #011c40;
   }
 
   .first-screen {
@@ -2236,83 +2225,83 @@ button,
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
-  .webp .closest-cruise__item:nth-of-type(1) {
-    background: url(../img/webp/astoria@2x.webp) no-repeat;
+  .webp .closest-cruise__item--first {
+    background: url("../img/webp/astoria@2x.webp") no-repeat;
     background-size: cover;
   }
 
-  .no-webp .closest-cruise__item:nth-of-type(1) {
-    background: url(../img/astoria@2x.png) no-repeat;
+  .no-webp .closest-cruise__item--first {
+    background: url("../img/astoria@2x.png") no-repeat;
     background-size: cover;
   }
 
-  .webp .closest-cruise__item:nth-of-type(2) {
-    background: url(../img/webp/astoria@2x.webp) no-repeat;
+  .webp .closest-cruise__item--second {
+    background: url("../img/webp/astoria@2x.webp") no-repeat;
     background-size: cover;
   }
 
-  .no-webp .closest-cruise__item:nth-of-type(2) {
-    background: url(../img/astoria@2x.png) no-repeat;
+  .no-webp .closest-cruise__item--second {
+    background: url("../img/astoria@2x.png") no-repeat;
     background-size: cover;
   }
 
-  .webp .closest-cruise__item:nth-of-type(3) {
-    background: url(../img/webp/atlantis@2x.webp) no-repeat;
+  .webp .closest-cruise__item--third {
+    background: url("../img/webp/atlantis@2x.webp") no-repeat;
     background-size: cover;
   }
 
-  .no-webp .closest-cruise__item:nth-of-type(3) {
-    background: url(../img/atlantis@2x.png) no-repeat;
+  .no-webp .closest-cruise__item--third {
+    background: url("../img/atlantis@2x.png") no-repeat;
     background-size: cover;
   }
 
-  .webp .closest-cruise__item:nth-of-type(4) {
-    background: url(../img/webp/odissey@2x.webp) no-repeat;
+  .webp .closest-cruise__item--fourth {
+    background: url("../img/webp/odissey@2x.webp") no-repeat;
     background-size: cover;
   }
 
-  .no-webp .closest-cruise__item:nth-of-type(4) {
-    background: url(../img/odissey@2x.png) no-repeat;
+  .no-webp .closest-cruise__item--fourth {
+    background: url("../img/odissey@2x.png") no-repeat;
     background-size: cover;
   }
 
-  .webp .closest-cruise__item:nth-of-type(5) {
-    background: url(../img/webp/olimpus@2x.webp) no-repeat;
+  .webp .closest-cruise__item--fifth {
+    background: url("../img/webp/olimpus@2x.webp") no-repeat;
     background-size: cover;
   }
 
-  .no-webp .closest-cruise__item:nth-of-type(5) {
-    background: url(../img/olimpus@2x.png) no-repeat;
+  .no-webp .closest-cruise__item--fifth {
+    background: url("../img/olimpus@2x.png") no-repeat;
     background-size: cover;
   }
 
-  .webp .closest-cruise__item:nth-of-type(6) {
-    background: url(../img/webp/avrora@2x.webp) no-repeat;
+  .webp .closest-cruise__item--sixth {
+    background: url("../img/webp/avrora@2x.webp") no-repeat;
     background-size: cover;
   }
 
-  .no-webp .closest-cruise__item:nth-of-type(6) {
-    background: url(../img/avrora@2x.png) no-repeat;
+  .no-webp .cclosest-cruise__item--sixth {
+    background: url("../img/avrora@2x.png") no-repeat;
     background-size: cover;
   }
 
-  .webp .closest-cruise__item:nth-of-type(7) {
-    background: url(../img/webp/leonor@2x.webp) no-repeat;
+  .webp .closest-cruise__item--seventh {
+    background: url("../img/webp/leonor@2x.webp") no-repeat;
     background-size: cover;
   }
 
-  .no-webp .closest-cruise__item:nth-of-type(7) {
-    background: url(../img/leonor@2x.png) no-repeat;
+  .no-webp .closest-cruise__item--seventh {
+    background: url("../img/leonor@2x.png") no-repeat;
     background-size: cover;
   }
 
-  .webp .closest-cruise__item:nth-of-type(8) {
-    background: url(../img/webp/minion@2x.webp) no-repeat;
+  .webp .closest-cruise__item--eighth {
+    background: url("../img/webp/minion@2x.webp") no-repeat;
     background-size: cover;
   }
 
-  .no-webp .closest-cruise__item:nth-of-type(8) {
-    background: url(../img/minion@2x.png) no-repeat;
+  .no-webp .closest-cruise__item--eighth {
+    background: url("../img/minion@2x.png") no-repeat;
     background-size: cover;
   }
 }
