@@ -1,6 +1,4 @@
 .booking {
-  // background: url(../img/booking-bg.png);
-  // background-size: cover;
   padding: 50px 163px;
 
   @include vp-1023 {
@@ -93,6 +91,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 0 8px;
 }
 
 .booking__text h3 {
@@ -103,7 +102,7 @@
   letter-spacing: 0;
   text-align: left;
   color: $color-dark-text;
-  margin: 0;
+  margin: 0 0 7px;
 
   @include vp-1023 {
     text-align: center;
@@ -148,8 +147,9 @@
   max-width: 403px;
   min-height: 455px;
   background: $color-dark-text;
-  padding: 50px;
+  padding: 42px 50px;
   justify-self: end;
+  margin-right: -6px;
 
   @include vp-1023 {
     justify-self: center;

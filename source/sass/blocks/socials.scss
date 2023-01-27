@@ -1,9 +1,11 @@
 .socials {
   justify-self: end;
+  max-width: 106px;
+  padding-top: 6px;
 }
 
 .socials__link:not(:last-of-type) {
-  margin-right: 27px;
+  margin-right: 22px;
 }
 
 .socials__icon {

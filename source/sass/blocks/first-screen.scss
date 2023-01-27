@@ -2,17 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  // background: url(../img/first-screen-bg.png) no-repeat;
   background-size: cover;
-  // min-height: 650px;
-  margin-top: -116px;
+  min-height: 647px;
+  margin-top: -71px;
   letter-spacing: 0;
   text-align: left;
   color: $color-default-white;
-  padding: 283px 0;
+  padding: 0 0 5px;
+  position: relative;
+  z-index: -1;
 
   @include vp-1023 {
-    margin-top: -70px;
+    margin-top: -52px;
     width: 100%;
     padding: 0 45px;
     min-height: 638px;
@@ -26,7 +27,7 @@
 }
 
 .webp .first-screen {
-  background-image: url("../img/webp/first-screen-bg.webp");
+  background: url("../img/webp/first-screen-bg.webp") no-repeat;
   background-size: cover;
   background-color: $color-dark-text;
 
@@ -38,7 +39,7 @@
   }
 
   @include vp-1023 {
-    background-image: url("../img/webp/first-screen-bg-tab.webp");
+    background: url("../img/webp/first-screen-bg-tab.webp");
     background-size: cover;
 
     @include retina {
@@ -48,7 +49,7 @@
   }
 
   @include vp-767 {
-    background-image: url("../img/webp/first-screen-bg-mob.webp");
+    background: url("../img/webp/first-screen-bg-mob.webp");
     background-size: cover;
 
     @include retina {
@@ -93,20 +94,20 @@
 
 .first-screen__text {
   margin: 0 auto;
-  padding-right: 360px;
+  padding-right: 330px;
 
   @include vp-1023 {
     margin: 0;
-    padding-right: 0;
+    padding: 0 0 10px 0;
   }
 }
 
-.first-screen h2 {
+.first-screen__text h1 {
   @include font-bold;
 
   font-size: 54px;
   line-height: 66px;
-  margin: 0;
+  margin: 0 0 12px;
 
   @include vp-1023 {
     font-size: 50px;
@@ -119,11 +120,12 @@
   }
 }
 
-.first-screen p {
+.first-screen__text p {
   @include font-regular;
 
   font-size: 20px;
   line-height: 24px;
+  margin: 0;
 
   @include vp-1023 {
     font-size: 18px;

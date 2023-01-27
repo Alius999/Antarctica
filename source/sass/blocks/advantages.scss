@@ -1,11 +1,9 @@
 .advantages {
-  // background: url(../img/advantages.png) no-repeat;
-  // background-size: cover;
   color: $color-dark-text;
-  padding: 120px 103px;
+  padding: 110px 100px 120px;
 
   @include vp-1023 {
-    padding: 100px 45px;
+    padding: 86px 45px;
   }
 
   @include vp-767 {
@@ -86,7 +84,11 @@
   line-height: 42px;
   letter-spacing: 0;
   text-align: center;
-  margin: 0 0 60px 0;
+  margin: 0 0 50px 0;
+
+  @include vp-1023 {
+    letter-spacing: -0.05em;
+  }
 
   @include vp-767 {
     font-size: 26px;
@@ -98,13 +100,14 @@
 .advantages__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 40px;
   margin: 0 auto;
   padding: 0;
   max-width: 1160px;
   list-style-type: none;
 
   @include vp-1023 {
+    grid-gap: 30px;
     width: 100%;
   }
 
@@ -114,19 +117,28 @@
 }
 
 .advantages__item {
+  hyphens: auto;
   width: 100%;
   max-width: 360px;
   min-height: 241px;
+  // height: 100%;
   background: $color-default-white;
-  padding: 30px;
+  padding: 31px;
 
   @include vp-1023 {
     min-height: 310px;
+    padding: 20px 10px 20px 20px;
   }
 
   @include vp-767 {
     max-width: 100%;
     min-height: 250px;
+  }
+}
+
+.advantages__item:last-of-type h3 {
+  @include vp-1023 {
+    margin-bottom: 18px;
   }
 }
 
@@ -137,6 +149,7 @@
   line-height: 25px;
   letter-spacing: 0;
   text-align: left;
+  margin: 13px 0 8px;
 }
 
 .advantages__item p {
@@ -146,4 +159,5 @@
   line-height: 20px;
   letter-spacing: 0;
   text-align: left;
+  margin: 0;
 }

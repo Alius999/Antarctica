@@ -824,15 +824,18 @@ button,
   -ms-flex-pack: start;
   justify-content: start;
   background-size: cover;
-  margin-top: -116px;
+  min-height: 647px;
+  margin-top: -71px;
   letter-spacing: 0;
   text-align: left;
   color: #ffffff;
-  padding: 283px 0;
+  padding: 0 0 5px;
+  position: relative;
+  z-index: -1;
 }
 
 .webp .first-screen {
-  background-image: url("../img/webp/first-screen-bg.webp");
+  background: url("../img/webp/first-screen-bg.webp") no-repeat;
   background-size: cover;
   background-color: #011c40;
 }
@@ -845,24 +848,25 @@ button,
 
 .first-screen__text {
   margin: 0 auto;
-  padding-right: 360px;
+  padding-right: 330px;
 }
 
-.first-screen h2 {
+.first-screen__text h1 {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 54px;
   line-height: 66px;
-  margin: 0;
+  margin: 0 0 12px;
 }
 
-.first-screen p {
+.first-screen__text p {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
   line-height: 24px;
+  margin: 0;
 }
 
 .second-screen {
@@ -876,7 +880,12 @@ button,
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   color: #011c40;
-  padding: 130px 103px 145px;
+  padding: 120px 0 145px;
+  max-width: 1160px;
+}
+
+.second-screen__text {
+  padding: 56px 0 0 2px;
 }
 
 .second-screen__container h2 {
@@ -887,7 +896,7 @@ button,
   line-height: 42px;
   letter-spacing: 0;
   text-align: left;
-  margin: 0 0 40px 0;
+  margin: 0 0 25px 0;
 }
 
 .second-screen__container p {
@@ -899,12 +908,17 @@ button,
   letter-spacing: 0;
   text-align: left;
   display: block;
-  max-width: 460px;
+  max-width: 520px;
+  margin: 0;
+}
+
+.second-screen__container img {
+  margin: 0 0 0 22px;
 }
 
 .advantages {
   color: #011c40;
-  padding: 120px 103px;
+  padding: 110px 100px 120px;
 }
 
 .webp .advantages {
@@ -927,7 +941,7 @@ button,
   line-height: 42px;
   letter-spacing: 0;
   text-align: center;
-  margin: 0 0 60px 0;
+  margin: 0 0 50px 0;
 }
 
 .advantages__list {
@@ -935,7 +949,7 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 40px;
   margin: 0 auto;
   padding: 0;
   max-width: 1160px;
@@ -943,11 +957,14 @@ button,
 }
 
 .advantages__item {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   width: 100%;
   max-width: 360px;
   min-height: 241px;
   background: #ffffff;
-  padding: 30px;
+  padding: 31px;
 }
 
 .advantages__item h3 {
@@ -958,6 +975,7 @@ button,
   line-height: 25px;
   letter-spacing: 0;
   text-align: left;
+  margin: 13px 0 8px;
 }
 
 .advantages__item p {
@@ -968,12 +986,13 @@ button,
   line-height: 20px;
   letter-spacing: 0;
   text-align: left;
+  margin: 0;
 }
 
 .closest-cruise {
   background: #ffffff;
   color: #011c40;
-  padding: 95px 0 120px;
+  padding: 85px 0 120px;
 }
 
 .closest-cruise h2 {
@@ -984,7 +1003,7 @@ button,
   line-height: 42px;
   letter-spacing: 0;
   text-align: center;
-  margin: 0 0 60px 0;
+  margin: 0 0 50px 0;
 }
 
 .closest-cruise__list {
@@ -993,9 +1012,9 @@ button,
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
-  max-width: 1130px;
+  max-width: 1133px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 0 0 3px;
   list-style-type: none;
 }
 
@@ -1025,7 +1044,7 @@ button,
   text-align: left;
   color: #ffffff;
   margin: 0;
-  padding: 35px 25px;
+  padding: 35px 32px 23px;
   display: -ms-grid;
   display: grid;
   -ms-flex-line-pack: end;
@@ -1043,7 +1062,7 @@ button,
   transition: 0.5s;
   max-width: 260px;
   height: 386px;
-  padding: 35px 25px;
+  padding: 28px 25px 25px;
   background: #011c40;
 }
 
@@ -1052,12 +1071,11 @@ button,
   color: #ffffff;
 }
 
-.closest-cruise__item-second-card h3 {
+.closest-cruise__item-second-card p:first-of-type {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 500;
   font-style: normal;
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 0 0 15px;
   font-size: 18px;
   line-height: 27px;
 }
@@ -1070,6 +1088,7 @@ button,
   line-height: 20px;
   letter-spacing: 0;
   text-align: left;
+  margin: 12px 0 10px;
 }
 
 .closest-cruise__item-second-card p span {
@@ -1102,6 +1121,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   color: #011c40;
+  margin-top: 24px;
 }
 
 .webp .closest-cruise__item--first {
@@ -1220,6 +1240,7 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding: 0 0 8px;
 }
 
 .booking__text h3 {
@@ -1231,7 +1252,7 @@ button,
   letter-spacing: 0;
   text-align: left;
   color: #011c40;
-  margin: 0;
+  margin: 0 0 7px;
 }
 
 .booking__text p {
@@ -1252,9 +1273,10 @@ button,
   max-width: 403px;
   min-height: 455px;
   background: #011c40;
-  padding: 50px;
+  padding: 42px 50px;
   -ms-grid-column-align: end;
   justify-self: end;
+  margin-right: -6px;
 }
 
 .booking-form p {
@@ -1266,7 +1288,7 @@ button,
   letter-spacing: 0;
   text-align: left;
   color: #ffffff;
-  margin: 0 0 35px 0;
+  margin: 0 0 28px 0;
 }
 
 .booking-form input {
@@ -1278,10 +1300,11 @@ button,
   letter-spacing: 0;
   text-align: left;
   width: 100%;
-  height: 42px;
+  height: 43px;
   padding: 11px 16px;
   color: #011c40;
   margin-bottom: 20px;
+  border: 0;
 }
 
 .booking-form input::-webkit-input-placeholder {
@@ -1306,6 +1329,7 @@ button,
 
 .booking-form__agreement {
   position: relative;
+  margin-top: -5px;
 }
 
 .booking-form__agreement label {
@@ -1317,7 +1341,7 @@ button,
   letter-spacing: 0;
   text-align: left;
   color: #ffffff;
-  margin-left: 21px;
+  margin-left: 23px;
   cursor: pointer;
 }
 
@@ -1333,12 +1357,11 @@ button,
   position: absolute;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-radius: 3px;
-  -webkit-transform: translate(0, 42%);
-  -ms-transform: translate(0, 42%);
-  transform: translate(0, 42%);
-  width: 15px;
-  height: 14px;
+  -webkit-transform: translate(0, 22%);
+  -ms-transform: translate(0, 22%);
+  transform: translate(0, 22%);
+  width: 18px;
+  height: 18px;
   border: 1px solid #ffffff;
   background: #ffffff;
 }
@@ -1404,6 +1427,7 @@ button,
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+  padding: 0 8px 8px 0;
 }
 
 .contacts__text p:nth-of-type(1) {
@@ -1414,7 +1438,7 @@ button,
   line-height: 27px;
   letter-spacing: 0;
   text-align: left;
-  margin: 0;
+  margin: 0 0 33px 0;
 }
 
 .contacts__text p:nth-of-type(2),
@@ -1432,6 +1456,11 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0;
+}
+
+.contacts__text p:nth-of-type(2) {
+  margin: 0 0 20px 0;
 }
 
 .contacts__icon {
@@ -1451,8 +1480,8 @@ button,
 .footer__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 110px 3fr 1fr;
-  grid-template-columns: 110px 3fr 1fr;
+  -ms-grid-columns: 74px 3.5fr 0.5fr;
+  grid-template-columns: 74px 3.5fr 0.5fr;
   max-width: 1160px;
   margin: 0 auto;
   -webkit-box-align: center;
@@ -1487,10 +1516,12 @@ button,
 .socials {
   -ms-grid-column-align: end;
   justify-self: end;
+  max-width: 106px;
+  padding-top: 6px;
 }
 
 .socials__link:not(:last-of-type) {
-  margin-right: 27px;
+  margin-right: 22px;
 }
 
 .socials__icon {
@@ -1710,6 +1741,7 @@ button,
   }
 
   .header__container {
+    margin-top: 28px;
     width: 100%;
     padding: 0 45px;
     -ms-grid-columns: 1fr 6fr;
@@ -1719,6 +1751,10 @@ button,
   .header__logo {
     width: 38px;
     height: 20px;
+  }
+
+  .header__list {
+    padding-right: 3px;
   }
 
   .header__item {
@@ -1731,14 +1767,14 @@ button,
   }
 
   .first-screen {
-    margin-top: -70px;
+    margin-top: -52px;
     width: 100%;
     padding: 0 45px;
     min-height: 638px;
   }
 
   .webp .first-screen {
-    background-image: url("../img/webp/first-screen-bg-tab.webp");
+    background: url("../img/webp/first-screen-bg-tab.webp");
     background-size: cover;
   }
 
@@ -1749,27 +1785,33 @@ button,
 
   .first-screen__text {
     margin: 0;
-    padding-right: 0;
+    padding: 0 0 10px 0;
   }
 
-  .first-screen h2 {
+  .first-screen__text h1 {
     font-size: 50px;
     line-height: 61px;
   }
 
-  .first-screen p {
+  .first-screen__text p {
     font-size: 18px;
     line-height: 22px;
   }
 
   .second-screen__container {
-    padding: 100px 45px;
+    padding: 90px 45px 95px;
+  }
+
+  .second-screen__text {
+    max-width: 320px;
+    padding: 0;
   }
 
   .second-screen__container h2 {
     font-size: 26px;
     line-height: 36px;
-    margin: 0 0 30px 0;
+    margin: 0 0 16px 0;
+    max-width: 300px;
   }
 
   .second-screen__container p {
@@ -1783,10 +1825,11 @@ button,
     height: 174px;
     -ms-grid-column-align: end;
     justify-self: end;
+    margin: 10px 0 0 10px;
   }
 
   .advantages {
-    padding: 100px 45px;
+    padding: 86px 45px;
   }
 
   .webp .advantages {
@@ -1799,12 +1842,22 @@ button,
     background-size: cover;
   }
 
+  .advantages h2 {
+    letter-spacing: -0.05em;
+  }
+
   .advantages__list {
+    grid-gap: 30px;
     width: 100%;
   }
 
   .advantages__item {
     min-height: 310px;
+    padding: 20px 10px 20px 20px;
+  }
+
+  .advantages__item:last-of-type h3 {
+    margin-bottom: 18px;
   }
 
   .closest-cruise {
@@ -2037,7 +2090,7 @@ button,
   }
 
   .webp .first-screen {
-    background-image: url("../img/webp/first-screen-bg-mob.webp");
+    background: url("../img/webp/first-screen-bg-mob.webp");
     background-size: cover;
   }
 
@@ -2046,12 +2099,12 @@ button,
     background-size: cover;
   }
 
-  .first-screen h2 {
+  .first-screen__text h1 {
     font-size: 36px;
     line-height: 45px;
   }
 
-  .first-screen p {
+  .first-screen__text p {
     font-size: 16px;
     line-height: 25px;
   }
