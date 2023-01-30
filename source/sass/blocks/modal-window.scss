@@ -43,11 +43,11 @@
   margin-left: 21px;
   cursor: pointer;
 
-  // &:hover,
-  // &:focus-visible {
-  //   opacity: 0.8;
-  //   outline: 1px solid rgb(40, 85, 154);
-  // }
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+    outline: 1px solid rgb(40, 85, 154);
+  }
 }
 
 .modal-window__rules label::before {

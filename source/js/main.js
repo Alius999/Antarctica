@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-// import leafletjs from './js/leaflet';
+import JustValidate from './just-validate.es';
 
 // ---------------------------------
 
@@ -25,6 +25,11 @@ const burgerIconOpen = document.querySelector('.header__burger-icon--open');
 const burgerIconClose = document.querySelector('.header__burger-icon--close');
 const headerList = document.querySelector('.header__list');
 const headerLogo = document.querySelector('.header__logo');
+// const headerLink = document.querySelector('.header__list');
+
+// If JS disabled
+
+headerList.classList.remove('header__list--no-js');
 
 burgerIconClose.addEventListener('click', () => {
   burgerIconClose.style.display = 'none';
@@ -42,7 +47,141 @@ burgerIconOpen.addEventListener('click', () => {
   headerLogo.style.marginLeft = 48;
 });
 
-// Map
+// Validation
+
+const validation = new JustValidate('#booking-form', {
+  errorFieldCssClass: 'is-invalid',
+});
+
+validation
+    .addField('#booking-form__name', [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'В имени должно быть больше трёх букв',
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+      },
+      {
+        rule: 'required',
+        errorMessage: 'Укажите Ваше имя',
+      },
+      {
+        rule: 'required',
+      }
+    ])
+    .addField('#booking-form__email', [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'В имени должно быть больше трёх букв',
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+      },
+      {
+        rule: 'required',
+        errorMessage: 'Укажите Ваше имя',
+      },
+      {
+        rule: 'required',
+      }
+    ])
+    .addField('#agreement', [
+      {
+        rule: 'required',
+        errorMessage: 'Вы должны согласиться с правилами',
+      },
+      {
+        rule: 'required',
+      }
+    ])
+    .addField('#booking-form__phone-number', [
+      {
+        rule: 'required',
+        errorMessage: 'Укажите Ваш телефон',
+      },
+      {
+        rule: 'minLength',
+        value: 16,
+        errorMessage: 'Неверный формат',
+      },
+      {
+        rule: 'maxLength',
+        value: 18,
+      },
+      {
+        rule: 'required',
+      }
+    ])
+    .onSuccess((event) => {
+      document.getElementById("booking-form").submit();
+    });
+
+    // // Валидация модального окна
+
+const validationModal = new JustValidate('#modal-window');
+
+validationModal
+    .addField('#modal-name', [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'В имени должно быть больше трёх букв',
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+      },
+      {
+        rule: 'required',
+        errorMessage: 'Укажите Ваше имя',
+      }
+    ])
+    .addField('#rules', [
+      {
+        rule: 'required',
+        errorMessage: 'Вы должны согласиться с правилами',
+      }
+    ])
+    validationModal
+    .addField('#modal-email', [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'В имени должно быть больше трёх букв',
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+      },
+      {
+        rule: 'required',
+        errorMessage: 'Укажите Ваше имя',
+      }
+    ])
+    .addField('#modal-phone', [
+      {
+        rule: 'required',
+        errorMessage: 'Укажите Ваш телефон',
+      },
+      {
+        rule: 'minLength',
+        value: 16,
+        errorMessage: 'Неверный формат',
+      },
+      {
+        rule: 'maxLength',
+        value: 18,
+      }
+    ])
+
+.onSuccess((event) => {
+  document.getElementById("modal-window").submit();
+});
 
 
 // ---------------------------------

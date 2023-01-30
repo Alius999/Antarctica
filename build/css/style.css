@@ -813,6 +813,11 @@ button,
   text-align: left;
 }
 
+.header__link:hover,
+.header__link:focus-visible {
+  opacity: 0.7;
+}
+
 .first-screen {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -832,12 +837,12 @@ button,
   padding: 0 0 5px;
   position: relative;
   z-index: -1;
+  background-color: #011c40;
 }
 
 .webp .first-screen {
   background: url("../img/webp/first-screen-bg.webp") no-repeat;
   background-size: cover;
-  background-color: #011c40;
 }
 
 .no-webp .first-screen {
@@ -967,6 +972,10 @@ button,
   padding: 31px;
 }
 
+.advantages__item:nth-of-type(2) h3 br {
+  display: none;
+}
+
 .advantages__item h3 {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 500;
@@ -1025,6 +1034,9 @@ button,
   background: #011c40;
   background-size: cover;
   overflow: hidden;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
 }
 
 .closest-cruise__item:hover .closest-cruise__item-second-card {
@@ -1122,6 +1134,11 @@ button,
   align-items: center;
   color: #011c40;
   margin-top: 24px;
+}
+
+.closest-cruise__book-button:hover,
+.closest-cruise__book-button:focus-visible {
+  opacity: 0.7;
 }
 
 .webp .closest-cruise__item--first {
@@ -1341,7 +1358,7 @@ button,
   letter-spacing: 0;
   text-align: left;
   color: #ffffff;
-  margin-left: 23px;
+  margin: 0 0 0 23px;
   cursor: pointer;
 }
 
@@ -1349,6 +1366,15 @@ button,
 .booking-form__agreement label:focus-visible {
   opacity: 0.8;
   outline: 1px solid rgb(40, 85, 154);
+}
+
+.booking-form__agreement input:focus-visible ~ label {
+  opacity: 0.7;
+  border: 1px solid rgb(40, 85, 154);
+}
+
+.booking-form__agreement input:focus-visible ~ label::before {
+  border: 1px solid rgb(40, 85, 154);
 }
 
 .booking-form__agreement label::before {
@@ -1360,6 +1386,8 @@ button,
   -webkit-transform: translate(0, 22%);
   -ms-transform: translate(0, 22%);
   transform: translate(0, 22%);
+  left: 2px;
+  top: 1px;
   width: 18px;
   height: 18px;
   border: 1px solid #ffffff;
@@ -1372,9 +1400,8 @@ button,
   position: absolute;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transform: translate(10%, -110%);
-  -ms-transform: translate(10%, -110%);
-  transform: translate(10%, -110%);
+  top: 40%;
+  left: 4px;
   background: url("../img/svg/checkmark-agreement.svg") no-repeat;
   width: 15px;
   height: 14px;
@@ -1404,6 +1431,11 @@ button,
   height: 43px;
   background: #ffffff;
   border: 0;
+}
+
+.booking-form__button:hover,
+.booking-form__button:focus-visible {
+  opacity: 0.7;
 }
 
 .contacts {
@@ -1509,6 +1541,11 @@ button,
   text-decoration: none;
 }
 
+.footer__link:hover,
+.footer__link:focus-visible {
+  opacity: 0.7;
+}
+
 .footer__item:not(:last-of-type) {
   margin-right: 33px;
 }
@@ -1518,6 +1555,11 @@ button,
   justify-self: end;
   max-width: 106px;
   padding-top: 6px;
+}
+
+.socials__link:hover,
+.socials__link:focus-visible {
+  opacity: 0.7;
 }
 
 .socials__link:not(:last-of-type) {
@@ -1591,6 +1633,12 @@ button,
   color: #ffffff;
   margin-left: 21px;
   cursor: pointer;
+}
+
+.modal-window__rules label:hover,
+.modal-window__rules label:focus-visible {
+  opacity: 0.8;
+  outline: 1px solid rgb(40, 85, 154);
 }
 
 .modal-window__rules label::before {
@@ -1829,7 +1877,7 @@ button,
   }
 
   .advantages {
-    padding: 86px 45px;
+    padding: 86px 45px 98px;
   }
 
   .webp .advantages {
@@ -1861,26 +1909,45 @@ button,
   }
 
   .closest-cruise {
-    padding: 100px 45px;
+    padding: 90px 45px 100px;
+  }
+
+  .closest-cruise h2 {
+    letter-spacing: -0.05em;
+    margin: 0 0 48px 0;
   }
 
   .closest-cruise__list {
     width: 100%;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
   }
 
   .closest-cruise__item {
     max-width: 309px;
   }
 
+  .closest-cruise__item:nth-of-type(odd) {
+    -ms-grid-column-align: end;
+    justify-self: end;
+    width: 309px;
+  }
+
+  .closest-cruise__item h3 {
+    padding: 35px 32px 28px;
+  }
+
   .closest-cruise__item-second-card {
     max-width: 309px;
+    padding: 28px 34px 25px;
+  }
+
+  .closest-cruise__book-button {
+    width: 98%;
   }
 
   .booking {
-    padding: 100px 175px;
+    padding: 88px 170px 100px;
   }
 
   .webp .booking {
@@ -1902,13 +1969,14 @@ button,
     text-align: center;
     font-size: 34px;
     line-height: 51px;
+    margin: 0 0 3px;
   }
 
   .booking__text p {
     display: inline;
     text-align: center;
     max-width: 100%;
-    margin: 0 0 60px 0;
+    margin: 0 0 44px 0;
     font-size: 18px;
     line-height: 27px;
   }
@@ -1916,15 +1984,21 @@ button,
   .booking__form {
     -ms-grid-column-align: center;
     justify-self: center;
-    max-width: 100%;
+    max-width: 94%;
+    margin-right: 1px;
+    padding: 44px 49px;
   }
 
   .contacts {
-    padding: 100px 45px;
+    padding: 110px 45px 90px;
   }
 
   .contacts__container {
     width: 100%;
+  }
+
+  .contacts__text {
+    padding: 0 0 20px 14px;
   }
 
   .contacts__text p br {
@@ -1934,12 +2008,25 @@ button,
   .contacts__text p:nth-of-type(1) {
     font-size: 18px;
     line-height: 27px;
+    margin: 0 0 30px 0;
+  }
+
+  .contacts__text p:nth-of-type(2),
+  .contacts__text p:nth-of-type(3) {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+
+  .contacts__text p:nth-of-type(2) {
+    display: block;
+    max-width: 220px;
   }
 
   .contacts__map {
     width: auto;
     height: 335px;
-    padding-right: 20px;
+    padding-right: 16px;
   }
 
   .contacts__map img {
@@ -1955,11 +2042,18 @@ button,
     -ms-grid-columns: 63px 4fr 1fr;
     grid-template-columns: 63px 4fr 1fr;
     width: 100%;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
   }
 
   .footer__container img {
     width: 38px;
     height: 20px;
+  }
+
+  .footer__list {
+    padding: 0;
   }
 
   .footer__link {
@@ -1974,6 +2068,14 @@ button,
 
   .footer__item:not(:last-of-type) {
     margin-right: 23px;
+  }
+
+  .socials {
+    padding: 0;
+  }
+
+  .socials__link:not(:last-of-type) {
+    margin-right: 17px;
   }
 }
 
@@ -2034,6 +2136,7 @@ button,
   .header__container {
     width: 100%;
     padding: 0 15px;
+    margin-top: 20px;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
@@ -2083,8 +2186,13 @@ button,
     color: #011c40;
   }
 
+  .header__list--no-js {
+    display: block;
+    height: auto;
+  }
+
   .first-screen {
-    margin-top: -60px;
+    margin-top: -40px;
     padding: 0 15px;
     min-height: 500px;
   }
@@ -2097,6 +2205,10 @@ button,
   .no-webp .first-screen {
     background-image: url("../img/first-screen-bg-mob.png");
     background-size: cover;
+  }
+
+  .first-screen__text {
+    padding: 0;
   }
 
   .first-screen__text h1 {
@@ -2112,16 +2224,22 @@ button,
   .second-screen__container {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    padding: 65px 15px 85px;
+    padding: 55px 15px 85px;
+  }
+
+  .second-screen__container h2 {
+    letter-spacing: -0.05em;
+    margin: 0 0 14px 0;
   }
 
   .second-screen__container img {
     width: 100%;
-    height: 100%;
+    height: 156px;
+    margin: 42px 0 0;
   }
 
   .advantages {
-    padding: 65px 15px;
+    padding: 55px 15px 62px;
   }
 
   .webp .advantages {
@@ -2137,7 +2255,7 @@ button,
   .advantages h2 {
     font-size: 26px;
     line-height: 39px;
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
   }
 
   .advantages__list {
@@ -2148,16 +2266,26 @@ button,
   .advantages__item {
     max-width: 100%;
     min-height: 250px;
+    padding: 20px;
+  }
+
+  .advantages__item:nth-of-type(2) h3 br {
+    display: block;
+  }
+
+  .advantages__item:last-of-type h3 {
+    margin-bottom: 8px;
   }
 
   .closest-cruise {
-    padding: 65px 15px;
+    padding: 58px 22px 64px;
   }
 
   .closest-cruise h2 {
     font-size: 24px;
     line-height: 36px;
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
+    letter-spacing: 0;
   }
 
   .closest-cruise__list {
@@ -2165,8 +2293,26 @@ button,
     grid-template-columns: 1fr;
   }
 
+  .closest-cruise__item {
+    max-width: 100%;
+  }
+
+  .closest-cruise__item:nth-of-type(odd) {
+    -ms-grid-column-align: normal;
+    justify-self: normal;
+    width: 100%;
+  }
+
+  .closest-cruise__item h3 {
+    padding: 35px 25px 18px;
+  }
+
+  .closest-cruise__item-second-card {
+    padding: 28px 25px 18px;
+  }
+
   .booking {
-    padding: 65px 15px;
+    padding: 60px 5px 66px;
   }
 
   .webp .booking {
@@ -2182,19 +2328,64 @@ button,
   .booking__text h3 {
     font-size: 24px;
     line-height: 31px;
+    display: block;
+    padding: 0 10px;
+    margin: 0 0 14px;
   }
 
   .booking__text p {
     font-size: 16px;
     line-height: 23px;
+    display: block;
+    padding: 0 10px;
+    margin: 0 0 24px 0;
+    text-align: center;
+  }
+
+  .booking__text p br {
+    display: none;
   }
 
   .booking__form {
-    padding: 40px 38px;
+    padding: 32px 30px 40px;
+  }
+
+  .booking-form p {
+    margin: 0 0 25px 0;
+    text-align: center;
+  }
+
+  .booking-form__agreement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    -ms-flex-line-pack: start;
+    align-content: start;
+  }
+
+  .booking-form__agreement label {
+    margin: 0 0 0 28px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0em;
+    margin-top: 5px;
+  }
+
+  .booking-form__button {
+    margin-top: 25px;
   }
 
   .contacts {
-    padding: 65px 15px;
+    padding: 58px 3px 66px;
   }
 
   .contacts__container {
@@ -2209,9 +2400,14 @@ button,
     grid-template-columns: 1fr;
   }
 
+  .contacts__text p:nth-of-type(1) {
+    margin: 0 0 27px 0;
+  }
+
   .contacts__map {
     width: 100%;
     height: 316px;
+    margin: 16px 0 0 10px;
   }
 
   .footer {
@@ -2237,11 +2433,15 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 0;
-    margin: 30px 0;
+    margin: 22px 0;
   }
 
   .footer__item:not(:last-of-type) {
-    margin-bottom: 23px;
+    margin-bottom: 9px;
+  }
+
+  .socials {
+    margin-left: -3px;
   }
 }
 

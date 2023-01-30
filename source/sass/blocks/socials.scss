@@ -2,10 +2,29 @@
   justify-self: end;
   max-width: 106px;
   padding-top: 6px;
+
+  @include vp-1023 {
+    padding: 0;
+  }
+
+  @include vp-767 {
+    margin-left: -3px;
+  }
+}
+
+.socials__link {
+  &:hover,
+  &:focus-visible {
+    opacity: 0.7;
+  }
 }
 
 .socials__link:not(:last-of-type) {
   margin-right: 22px;
+
+  @include vp-1023 {
+    margin-right: 17px;
+  }
 }
 
 .socials__icon {

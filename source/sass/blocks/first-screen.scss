@@ -11,6 +11,7 @@
   padding: 0 0 5px;
   position: relative;
   z-index: -1;
+  background-color: $color-dark-text;
 
   @include vp-1023 {
     margin-top: -52px;
@@ -20,7 +21,7 @@
   }
 
   @include vp-767 {
-    margin-top: -60px;
+    margin-top: -40px;
     padding: 0 15px;
     min-height: 500px;
   }
@@ -29,7 +30,6 @@
 .webp .first-screen {
   background: url("../img/webp/first-screen-bg.webp") no-repeat;
   background-size: cover;
-  background-color: $color-dark-text;
 
   @include vp-1024 {
     @include retina {
@@ -99,6 +99,10 @@
   @include vp-1023 {
     margin: 0;
     padding: 0 0 10px 0;
+  }
+
+  @include vp-767 {
+    padding: 0;
   }
 }
 

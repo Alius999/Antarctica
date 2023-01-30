@@ -79,7 +79,7 @@
           <svg class="header__logo" width="70" height="38" viewBox="0 0 70 38" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="#logo"></use>
           </svg>
-          <ul class="header__list">
+          <ul class="header__list header__list--no-js">
             <li class="header__item"><a href="#" class="header__link">Преимущества</a></li>
             <li class="header__item"><a href="#" class="header__link">Направления</a></li>
             <li class="header__item"><a href="#" class="header__link">Ближайшие круизы</a></li>
@@ -92,14 +92,14 @@
       <main>
         <section class="first-screen">
           <div class="first-screen__text">
-            <h1>Круизы в Антарктику</h1>
-            <p>Волшебный мир айсбергов и пингвинов</p>
+            <h1>Круизы в&nbsp;Антарктику</h1>
+            <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
           </div>
         </section>
         <section class="second-screen">
           <div class="second-screen__container">
             <div class="second-screen__text">
-              <h2>Путешествие на&nbsp;край Земли</h2>
+              <h2>Путешествие на&nbsp;край&nbsp;Земли</h2>
               <p>Это волшебное путешествие поможет вам&nbsp;познакомиться поближе с&nbsp;удивительным миром Антарктики.
                 Наш&nbsp;круизный лайнер отвезет вас&nbsp;&nbsp; на край Земли, где&nbsp;вы сможете увидеть: ледяные айсберги,
                 несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
@@ -117,21 +117,21 @@
               <svg class="advantages__item-image" width="27" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#ship"></use>
               </svg>
-              <h3>Небольшой круизный лайнер</h3>
-              <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300 гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
+              <h3>Небольшой круизный&nbsp;лайнер</h3>
+              <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300 гостей, поможет избежать шума и очередей&nbsp;и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
             </li>
             <li class="advantages__item">
               <svg class="advantages__item-image" width="38" height="32" viewBox="0 0 38 32" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#checkmark"></use>
               </svg>
-              <h3>Система все&nbsp;включено</h3>
-              <p>Все наши круизы работают по системе "Все Включено". Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
+              <h3>Система<br> все&nbsp;включено</h3>
+              <p>Все наши круизы работают по системе "Все Включено". Великолепные блюда и&nbsp;безлимитный бар доступны для&nbsp;вас 24&nbsp;часа.</p>
             </li>
             <li class="advantages__item">
               <svg class="advantages__item-image" width="44" height="32" viewBox="0 0 44 32" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#boat"></use>
               </svg>
-              <h3>Экскурсионные туры на Zodiac</h3>
+              <h3>Экскурсионные туры&nbsp;на&nbsp;Zodiac</h3>
               <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiack c&nbsp;опытными экскурсоводами.</p>
             </li>
           </ul>
@@ -361,22 +361,25 @@
           <div class="booking__container">
             <div class="booking__text">
               <h3>Раннее бронирование</h3>
-              <p>Забронируйте тур за 3-6 месяцев
+              <p>Забронируйте тур за&nbsp;3&nbsp;-&nbsp;6&nbsp;месяцев&nbsp;
                 <br>
-                до даты выезда и сэкономьте до 50%</p>
+                до&nbsp;даты&nbsp;выезда и&nbsp;сэкономьте до 50%</p>
             </div>
             <div class="booking__form">
-              <form action="https://echo.htmlacademy.ru" method="post" class="booking-form">
-                <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
-                <label class="visually-hidden" for="name">Имя</label>
-                <input type="text" id="name" placeholder="Имя" required>
-                <label class="visually-hidden" for="phone-number">Номер телефона</label>
-                <input type="tel" id="phone-number" placeholder="Телефон" required>
-                <label class="visually-hidden" for="email">Почта</label>
-                <input type="email" id="email" placeholder="Email" required>
+              <form action="https://echo.htmlacademy.ru" method="post" class="booking-form" id="booking-form">
+                <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся&nbsp;с&nbsp;вами в&nbsp;ближайшее время</p>
+                <label for="booking-form__name">
+                  <input type="text" id="booking-form__name" name="booking-form__name" placeholder="Имя" required>
+                </label>
+                <label for="booking-form__phone-number">
+                  <input type="tel" id="booking-form__phone-number" name="booking-form__phone-number" placeholder="Телефон" required>
+                </label>
+                <label for="booking-form__email">
+                  <input type="email" id="booking-form__email" name="booking-form__email" placeholder="Email" required>
+                </label>
                 <div class="booking-form__agreement">
                   <input class="booking-form__checkbox visually-hidden" name="agreement" id="agreement" type="checkbox" checked required>
-                  <label for="agreement" class="booking-form__label">Я согласен на&nbsp;обработку моих персональных данных</label>
+                  <label for="agreement" class="booking-form__label">Я согласен на&nbsp;обработку моих&nbsp;персональных данных</label>
                 </div>
                 <button class="booking-form__button">Оставить заявку</button>
               </form>
@@ -387,18 +390,17 @@
           <h2 class="visually-hidden">Контакты</h2>
           <div class="contacts__container">
             <div class="contacts__map" id="map">
-              <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab5ceff21be1ed7da0ddd2e87e397c9e60ab8715e595d65bc3790937dc77d7f19&amp;width=auto&amp;height=auto&amp;lang=ru_RU&amp;scroll=true"></script> -->
               <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab5ceff21be1ed7da0ddd2e87e397c9e60ab8715e595d65bc3790937dc77d7f19&amp;width=auto&amp;height=auto&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
             <div class="contacts__text">
             <p>У вас ещё остались вопросы или сомнения?
               <br>
-              Приезжайте к нам в офис и мы вам все расскажем.</p>
+              Приезжайте к&nbsp;нам в&nbsp;офис и мы вам все расскажем.</p>
             <p>
               <svg class="contacts__icon" width="18" height="22" viewBox="0 0 18 22" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#marker"></use>
               </svg>
-              г. Санкт Петербург, ул. Лабутина, 4/2
+              г. Санкт Петербург, ул. Лабутина,&nbsp;4/2
             </p>
             <p>
               <svg class="contacts__icon" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -444,19 +446,22 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <form action="https://echo.htmlacademy.ru" method="post" class="modal-window">
+          <form action="https://echo.htmlacademy.ru" method="post" class="modal-window" id="modal-window">
             <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
-            <label for="modal-name">Имя</label>
-            <input type="text" id="modal-name" placeholder="Имя" required>
-            <label for="modal-phone-number">Номер телефона</label>
-            <input type="tel" id="modal-phone-number" placeholder="Телефон" required>
-            <label for="modal-email">Почта</label>
-            <input type="email" id="modal-email" placeholder="Email" required>
+            <label for="modal-name">
+              <input type="text" id="modal-name" name="modal-name" placeholder="Имя" required tabindex="1" id="modal-window__name">
+            </label>
+            <label for="modal-phone">
+              <input type="tel" id="modal-phone" name="modal-phone-number" placeholder="Телефон" required tabindex="2">
+            </label>
+            <label for="modal-email">
+              <input type="email" id="modal-email" name="modal-email" placeholder="Email" required tabindex="3">
+            </label>
             <div class="modal-window__rules">
               <input class="modal-window__checkbox visually-hidden" name="rules" id="rules" type="checkbox" checked required>
-              <label for="rules" class="modal-window__label">Я согласен на&nbsp;обработку  персональных данных</label>
+              <label for="rules" class="modal-window__label" tabindex="4">Я согласен на&nbsp;обработку  персональных данных</label>
             </div>
-            <button class="modal-window__button">Оставить заявку</button>
+            <button class="modal-window__button" tabindex="5">Оставить заявку</button>
           </form>
         </div>
       </div>

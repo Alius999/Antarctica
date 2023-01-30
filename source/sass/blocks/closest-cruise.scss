@@ -4,11 +4,11 @@
   padding: 85px 0 120px;
 
   @include vp-1023 {
-    padding: 100px 45px;
+    padding: 90px 45px 100px;
   }
 
   @include vp-767 {
-    padding: 65px 15px;
+    padding: 58px 22px 64px;
   }
 }
 
@@ -21,10 +21,16 @@
   text-align: center;
   margin: 0 0 50px 0;
 
+  @include vp-1023 {
+    letter-spacing: -0.05em;
+    margin: 0 0 48px 0;
+  }
+
   @include vp-767 {
     font-size: 24px;
     line-height: 36px;
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
+    letter-spacing: 0;
   }
 }
 
@@ -40,7 +46,6 @@
   @include vp-1023 {
     width: 100%;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
   }
 
   @include vp-767 {
@@ -55,11 +60,36 @@
   background: $color-dark-text;
   background-size: cover;
   overflow: hidden;
+  justify-content: end;
 
   @include vp-1023 {
     max-width: 309px;
   }
+
+  @include vp-767 {
+    max-width: 100%;
+  }
 }
+
+.closest-cruise__item:nth-of-type(odd) {
+
+  @include vp-1023 {
+    justify-self: end;
+    width: 309px;
+  }
+
+  @include vp-767 {
+    justify-self: normal;
+    width: 100%;
+  }
+}
+
+// .closest-cruise__item:nth-of-type(even) {
+
+//   @include vp-767 {
+//     justify-self: center;
+//   }
+// }
 
 .closest-cruise__item:hover {
   .closest-cruise__item-second-card {
@@ -82,6 +112,14 @@
   align-content: end;
   width: 100%;
   height: 100%;
+
+  @include vp-1023 {
+    padding: 35px 32px 28px;
+  }
+
+  @include vp-767 {
+    padding: 35px 25px 18px;
+  }
 }
 
 .closest-cruise__item-second-card {
@@ -96,6 +134,11 @@
 
   @include vp-1023 {
     max-width: 309px;
+    padding: 28px 34px 25px;
+  }
+
+  @include vp-767 {
+    padding: 28px 25px 18px;
   }
 }
 
@@ -145,6 +188,16 @@
   align-items: center;
   color: $color-dark-text;
   margin-top: 24px;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+
+  @include vp-1023 {
+    width: 98%;
+  }
 }
 
 .webp .closest-cruise__item--first {

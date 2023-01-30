@@ -2,11 +2,11 @@
   padding: 50px 163px;
 
   @include vp-1023 {
-    padding: 100px 175px;
+    padding: 88px 170px 100px;
   }
 
   @include vp-767 {
-    padding: 65px 15px;
+    padding: 60px 5px 66px;
   }
 }
 
@@ -108,11 +108,15 @@
     text-align: center;
     font-size: 34px;
     line-height: 51px;
+    margin: 0 0 3px;
   }
 
   @include vp-767 {
     font-size: 24px;
     line-height: 31px;
+    display: block;
+    padding: 0 10px;
+    margin: 0 0 14px;
   }
 }
 
@@ -132,7 +136,7 @@
     display: inline;
     text-align: center;
     max-width: 100%;
-    margin: 0 0 60px 0;
+    margin: 0 0 44px 0;
     font-size: 18px;
     line-height: 27px;
   }
@@ -140,6 +144,16 @@
   @include vp-767 {
     font-size: 16px;
     line-height: 23px;
+    display: block;
+    padding: 0 10px;
+    margin: 0 0 24px 0;
+    text-align: center;
+  }
+}
+
+.booking__text p br {
+  @include vp-767 {
+    display: none;
   }
 }
 
@@ -153,10 +167,12 @@
 
   @include vp-1023 {
     justify-self: center;
-    max-width: 100%;
+    max-width: 94%;
+    margin-right: 1px;
+    padding: 44px 49px;
   }
 
   @include vp-767 {
-    padding: 40px 38px;
+    padding: 32px 30px 40px;
   }
 }

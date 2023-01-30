@@ -16,7 +16,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    padding: 65px 15px 85px;
+    padding: 55px 15px 85px;
   }
 }
 
@@ -43,6 +43,11 @@
     line-height: 36px;
     margin: 0 0 16px 0;
     max-width: 300px;
+  }
+
+  @include vp-767 {
+    letter-spacing: -0.05em;
+    margin: 0 0 14px 0;
   }
 }
 
@@ -76,6 +81,7 @@
 
   @include vp-767 {
     width: 100%;
-    height: 100%;
+    height: 156px;
+    margin: 42px 0 0;
   }
 }

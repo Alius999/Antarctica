@@ -18,6 +18,7 @@
   @include vp-767 {
     width: 100%;
     padding: 0 15px;
+    margin-top: 20px;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -107,6 +108,11 @@
   letter-spacing: 0;
   text-align: left;
 
+  &:hover,
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
   @include vp-1023 {
     font-size: 14px;
     line-height: 17px;
@@ -118,3 +124,17 @@
     color: $color-dark-text;
   }
 }
+
+.header__list--no-js {
+
+  @include vp-767 {
+    display: block;
+    height: auto;
+  }
+}
+
+// .header__list--no-js ~ .header__burger-icon--close {
+//   @include vp-767 {
+//     display: block;
+//   }
+// }

@@ -3,11 +3,11 @@
   padding: 120px 0;
 
   @include vp-1023 {
-    padding: 100px 45px;
+    padding: 110px 45px 90px;
   }
 
   @include vp-767 {
-    padding: 65px 15px;
+    padding: 58px 3px 66px;
   }
 }
 
@@ -33,6 +33,10 @@
   justify-self: end;
   align-self: center;
   padding: 0 8px 8px 0;
+
+  @include vp-1023 {
+    padding: 0 0 20px 14px;
+  }
 }
 
 .contacts__text p br {
@@ -53,6 +57,11 @@
   @include vp-1023 {
     font-size: 18px;
     line-height: 27px;
+    margin: 0 0 30px 0;
+  }
+
+  @include vp-767 {
+    margin: 0 0 27px 0;
   }
 }
 
@@ -67,10 +76,19 @@
   display: flex;
   align-items: center;
   margin: 0;
+
+  @include vp-1023 {
+    align-items: start;
+  }
 }
 
 .contacts__text p:nth-of-type(2) {
   margin: 0 0 20px 0;
+
+  @include vp-1023 {
+    display: block;
+    max-width: 220px;
+  }
 }
 
 .contacts__icon {
@@ -84,12 +102,13 @@
   @include vp-1023 {
     width: auto;
     height: 335px;
-    padding-right: 20px;
+    padding-right: 16px;
   }
 
   @include vp-767 {
     width: 100%;
     height: 316px;
+    margin: 16px 0 0 10px;
   }
 }
 
