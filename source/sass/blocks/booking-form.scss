@@ -127,6 +127,8 @@
   height: 43px;
   background: $color-default-white;
   border: 0;
+  user-select: none;
+  cursor: pointer;
 
   &:hover,
   &:focus-visible {

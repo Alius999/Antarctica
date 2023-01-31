@@ -1,7 +1,7 @@
 .closest-cruise {
   background: $color-default-white;
   color: $color-dark-text;
-  padding: 85px 0 120px;
+  padding: 85px 20px 120px;
 
   @include vp-1023 {
     padding: 90px 45px 100px;
@@ -84,14 +84,8 @@
   }
 }
 
-// .closest-cruise__item:nth-of-type(even) {
-
-//   @include vp-767 {
-//     justify-self: center;
-//   }
-// }
-
-.closest-cruise__item:hover {
+.closest-cruise__item:hover,
+.closest-cruise__item:active {
   .closest-cruise__item-second-card {
     top: 0;
     transition: 0.5s;
@@ -127,10 +121,14 @@
   z-index: 2;
   top: 100%;
   transition: 0.5s;
+  width: 100%;
   max-width: 260px;
-  height: 386px;
+  height: 100%;
   padding: 28px 25px 25px;
   background: $color-dark-text;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
 
   @include vp-1023 {
     max-width: 309px;
@@ -139,7 +137,20 @@
 
   @include vp-767 {
     padding: 28px 25px 18px;
+    max-width: 100%;
   }
+}
+
+.closest-cruise__item-second-card::-webkit-scrollbar {
+  width: 3px;
+}
+
+.closest-cruise__item-second-card::-webkit-scrollbar-track {
+  background-color: rgb(167, 172, 235);
+}
+
+.closest-cruise__item-second-card::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .closest-cruise__item-second-card h3,
@@ -181,13 +192,17 @@
   line-height: 21px;
   letter-spacing: 0;
   display: flex;
-  width: 210px;
-  height: 40px;
+  max-width: 210px;
+  min-height: 40px;
   background: $color-default-white;
   justify-content: center;
   align-items: center;
   color: $color-dark-text;
   margin-top: 24px;
+  padding: 5px;
+  word-break: break-all;
+  user-select: none;
+  cursor: pointer;
 
   &:hover,
   &:focus-visible {

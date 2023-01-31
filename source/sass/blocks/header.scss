@@ -1,3 +1,11 @@
+.header {
+  padding: 0 20px;
+
+  @include vp-1023 {
+    padding: 0;
+  }
+}
+
 .header__container {
   position: relative;
   margin: 0 auto;
@@ -43,6 +51,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 
   @include vp-1023 {
     padding-right: 3px;
@@ -51,7 +60,7 @@
   @include vp-767 {
     display: none;
     top: -35px;
-    padding: 65px 0 0 25px;
+    padding: 100px 0 0 25px;
     height: calc(100vh + 35px);
     width: calc(100vw - 35px);
     position: absolute;
@@ -91,7 +100,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 28px 0;
+    margin: 0 0 26px 0;
   }
 }
 
@@ -132,9 +141,3 @@
     height: auto;
   }
 }
-
-// .header__list--no-js ~ .header__burger-icon--close {
-//   @include vp-767 {
-//     display: block;
-//   }
-// }

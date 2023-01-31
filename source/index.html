@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru"  style="scroll-behavior: smooth;">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
     <link rel="preload" href="fonts/Montserrat-700.woff2" as="font">
     <title>Antarctic Ice</title>
   </head>
-  <body>
+  <body class="page">
     <svg style="display: none;">
       <symbol id="ship">
           <path d="M4.40549 16.3962L13.2165 9.93576C13.4162 9.8063 13.6711 9.8063 13.8708 9.93576L22.7254 16.3962V8.68818C22.7739 7.6312 21.9743 6.7343 20.9396 6.68484C20.9242 6.68407 20.9089 6.68356 20.8934 6.68322H6.23749C5.20189 6.70667 4.38094 7.58319 4.4039 8.6411C4.40423 8.6568 4.40473 8.67249 4.40549 8.68818V16.3962Z"/>
@@ -74,16 +74,17 @@
       </symbol>
     </svg>
     <div class="wrapper">
+      <div class="overlay visually-hidden"></div>
       <header class="header">
         <div class="header__container">
           <svg class="header__logo" width="70" height="38" viewBox="0 0 70 38" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="#logo"></use>
           </svg>
           <ul class="header__list header__list--no-js">
-            <li class="header__item"><a href="#" class="header__link">Преимущества</a></li>
-            <li class="header__item"><a href="#" class="header__link">Направления</a></li>
-            <li class="header__item"><a href="#" class="header__link">Ближайшие круизы</a></li>
-            <li class="header__item"><a href="#" class="header__link btn" data-open-modal="feedback">Контакты</a></li>
+            <li class="header__item"><a href="#advantages" class="header__link">Преимущества</a></li>
+            <li class="header__item"><a href="#closest-cruises" class="header__link">Направления</a></li>
+            <li class="header__item"><a href="#closest-cruises" class="header__link">Ближайшие круизы</a></li>
+            <li class="header__item"><a href="#contacts" class="header__link btn" data-open-modal="feedback">Контакты</a></li>
           </ul>
             <img src="img/svg/burger-icon.svg" class="header__burger-icon header__burger-icon--open" width="24" height="24" alt="Открыть">
             <img src="img/svg/burger-icon-close.svg" class="header__burger-icon header__burger-icon--close" width="13" height="13" alt="Закрыть">
@@ -104,13 +105,15 @@
                 Наш&nbsp;круизный лайнер отвезет вас&nbsp;&nbsp; на край Земли, где&nbsp;вы сможете увидеть: ледяные айсберги,
                 несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
             </div>
-            <picture>
-              <source type="image/webp" srcset="img/webp/pinguins.webp 1x, img/webp/pinguins@2x.webp 2x">
-              <img src="img/pinguins.png" srcset="img/pinguins@2x.png" width="560" height="301" alt="Пингвины">
-            </picture>
+            <div class="second-screen__img-container">
+              <picture>
+                <source type="image/webp" srcset="img/webp/pinguins.webp 1x, img/webp/pinguins@2x.webp 2x">
+                <img src="img/pinguins.png" srcset="img/pinguins@2x.png" alt="Пингвины">
+              </picture>
+            </div>
           </div>
         </section>
-        <section class="advantages">
+        <section class="advantages" id="advantages">
           <h2 class="advantages__header">Преимущества</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
@@ -136,7 +139,7 @@
             </li>
           </ul>
         </section>
-        <section class="closest-cruise">
+        <section class="closest-cruise" id="closest-cruises">
           <h2>Ближайшие круизы</h2>
           <ul class="closest-cruise__list">
             <li class="closest-cruise__item closest-cruise__item--first">
@@ -367,7 +370,7 @@
             </div>
             <div class="booking__form">
               <form action="https://echo.htmlacademy.ru" method="post" class="booking-form" id="booking-form">
-                <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся&nbsp;с&nbsp;вами в&nbsp;ближайшее время</p>
+                <p>Оставьте заявку и мы свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
                 <label for="booking-form__name">
                   <input type="text" id="booking-form__name" name="booking-form__name" placeholder="Имя" required>
                 </label>
@@ -386,7 +389,7 @@
             </div>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <div class="contacts__container">
             <div class="contacts__map" id="map">
@@ -402,12 +405,12 @@
               </svg>
               г. Санкт Петербург, ул. Лабутина,&nbsp;4/2
             </p>
-            <p>
+            <a href="tel:+78002000000">
               <svg class="contacts__icon" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#phone"></use>
               </svg>
               8-800-200-00-00
-            </p>
+            </a>
           </div>
           </div>
         </section>

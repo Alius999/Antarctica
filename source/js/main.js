@@ -25,11 +25,14 @@ const burgerIconOpen = document.querySelector('.header__burger-icon--open');
 const burgerIconClose = document.querySelector('.header__burger-icon--close');
 const headerList = document.querySelector('.header__list');
 const headerLogo = document.querySelector('.header__logo');
-// const headerLink = document.querySelector('.header__list');
+const overlay = document.querySelector('.overlay');
+const mainHtml = document.querySelector('.page');
 
 // If JS disabled
 
 headerList.classList.remove('header__list--no-js');
+
+// Open/Close menu
 
 burgerIconClose.addEventListener('click', () => {
   burgerIconClose.style.display = 'none';
@@ -37,6 +40,8 @@ burgerIconClose.addEventListener('click', () => {
   headerList.style.display = 'none';
   headerLogo.style.fill = '#F9FBFD';
   headerLogo.style.marginLeft = 0;
+  overlay.classList.add('visually-hidden');
+  mainHtml.classList.remove('page__hidden');
 });
 
 burgerIconOpen.addEventListener('click', () => {
@@ -44,7 +49,19 @@ burgerIconOpen.addEventListener('click', () => {
   burgerIconOpen.style.display = 'none';
   headerList.style.display = 'block';
   headerLogo.style.fill = '#011C40';
-  headerLogo.style.marginLeft = 48;
+  headerLogo.style.marginLeft = 36;
+  mainHtml.classList.add('page__hidden');
+  overlay.classList.remove('visually-hidden');
+});
+
+overlay.addEventListener('click', () => {
+  burgerIconClose.style.display = 'none';
+  burgerIconOpen.style.display = 'block';
+  headerList.style.display = 'none';
+  headerLogo.style.fill = '#F9FBFD';
+  headerLogo.style.marginLeft = 0;
+  overlay.classList.add('visually-hidden');
+  mainHtml.classList.remove('page__hidden');
 });
 
 // Validation
@@ -183,6 +200,14 @@ validationModal
   document.getElementById("modal-window").submit();
 });
 
+// Only numbers in phone fields
+
+const bookingPhone = document.querySelector('#booking-form__phone-number'); // Получаем input
+const allowSymbols = /[0-9]/g; // регулярка только цифры
+
+bookingPhone.addEventListener('keyup', () => {
+  bookingPhone.value = bookingPhone.value.replace(/[^,+\d]/g,'');
+})
 
 // ---------------------------------
 

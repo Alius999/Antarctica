@@ -585,6 +585,19 @@ button,
   flex-grow: 1;
 }
 
+.page__hidden {
+  overflow: hidden;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(38, 19, 79, 0.487);
+}
+
 .rouble {
   font-family: "Rouble", "Arial", sans-serif;
   /* stylelint-disable */
@@ -760,6 +773,10 @@ button,
   pointer-events: auto;
 }
 
+.header {
+  padding: 0 20px;
+}
+
 .header__container {
   position: relative;
   margin: 0 auto;
@@ -788,6 +805,8 @@ button,
   list-style-type: none;
   margin: 0;
   padding: 0;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .header__burger-icon {
@@ -876,13 +895,14 @@ button,
 
 .second-screen {
   background: #ffffff;
+  padding: 0 20px;
 }
 
 .second-screen__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 0.95fr 1fr;
+  grid-template-columns: 0.95fr 1fr;
   margin: 0 auto;
   color: #011c40;
   padding: 120px 0 145px;
@@ -917,8 +937,13 @@ button,
   margin: 0;
 }
 
+.second-screen__img-container {
+  -ms-grid-column-align: end;
+  justify-self: end;
+}
+
 .second-screen__container img {
-  margin: 0 0 0 22px;
+  margin: 0;
 }
 
 .advantages {
@@ -1001,7 +1026,7 @@ button,
 .closest-cruise {
   background: #ffffff;
   color: #011c40;
-  padding: 85px 0 120px;
+  padding: 85px 20px 120px;
 }
 
 .closest-cruise h2 {
@@ -1039,7 +1064,8 @@ button,
   justify-content: end;
 }
 
-.closest-cruise__item:hover .closest-cruise__item-second-card {
+.closest-cruise__item:hover .closest-cruise__item-second-card,
+.closest-cruise__item:active .closest-cruise__item-second-card {
   top: 0;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -1072,10 +1098,27 @@ button,
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  width: 100%;
   max-width: 260px;
-  height: 386px;
+  height: 100%;
   padding: 28px 25px 25px;
   background: #011c40;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+.closest-cruise__item-second-card::-webkit-scrollbar {
+  width: 3px;
+}
+
+.closest-cruise__item-second-card::-webkit-scrollbar-track {
+  background-color: rgb(167, 172, 235);
+}
+
+.closest-cruise__item-second-card::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .closest-cruise__item-second-card h3,
@@ -1123,8 +1166,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 210px;
-  height: 40px;
+  max-width: 210px;
+  min-height: 40px;
   background: #ffffff;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1134,6 +1177,13 @@ button,
   align-items: center;
   color: #011c40;
   margin-top: 24px;
+  padding: 5px;
+  word-break: break-all;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 }
 
 .closest-cruise__book-button:hover,
@@ -1431,6 +1481,11 @@ button,
   height: 43px;
   background: #ffffff;
   border: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 }
 
 .booking-form__button:hover,
@@ -1440,7 +1495,7 @@ button,
 
 .contacts {
   background: #ffffff;
-  padding: 120px 0;
+  padding: 120px 20px;
 }
 
 .contacts__container {
@@ -1506,7 +1561,7 @@ button,
 
 .footer {
   background: #011c40;
-  padding: 50px 0;
+  padding: 50px 20px;
 }
 
 .footer__container {
@@ -1527,6 +1582,8 @@ button,
   display: flex;
   list-style-type: none;
   margin: 0;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .footer__link {
@@ -1696,6 +1753,7 @@ button,
   height: 43px;
   background: #ffffff;
   border: 0;
+  cursor: pointer;
 }
 
 /* @mixin hover-focus {
@@ -1788,6 +1846,10 @@ button,
     max-width: 100%;
   }
 
+  .header {
+    padding: 0;
+  }
+
   .header__container {
     margin-top: 28px;
     width: 100%;
@@ -1844,6 +1906,10 @@ button,
   .first-screen__text p {
     font-size: 18px;
     line-height: 22px;
+  }
+
+  .second-screen {
+    padding: 0;
   }
 
   .second-screen__container {
@@ -2149,7 +2215,7 @@ button,
   .header__list {
     display: none;
     top: -35px;
-    padding: 65px 0 0 25px;
+    padding: 100px 0 0 25px;
     height: calc(100vh + 35px);
     width: calc(100vw - 35px);
     position: absolute;
@@ -2177,7 +2243,7 @@ button,
   }
 
   .header__item {
-    margin: 0 0 28px 0;
+    margin: 0 0 26px 0;
   }
 
   .header__link {
@@ -2227,14 +2293,24 @@ button,
     padding: 55px 15px 85px;
   }
 
+  .second-screen__text {
+    max-width: 100%;
+  }
+
   .second-screen__container h2 {
+    max-width: 100%;
     letter-spacing: -0.05em;
     margin: 0 0 14px 0;
   }
 
+  .second-screen__img-container {
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
   .second-screen__container img {
     width: 100%;
-    height: 156px;
+    height: 100%;
     margin: 42px 0 0;
   }
 
@@ -2309,6 +2385,7 @@ button,
 
   .closest-cruise__item-second-card {
     padding: 28px 25px 18px;
+    max-width: 100%;
   }
 
   .booking {
@@ -2405,9 +2482,10 @@ button,
   }
 
   .contacts__map {
-    width: 100%;
+    width: 95%;
     height: 316px;
     margin: 16px 0 0 10px;
+    padding: 0;
   }
 
   .footer {
