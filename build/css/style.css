@@ -2224,6 +2224,8 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     background: #ffffff;
+    overflow-y: scroll;
+    overflow-x: auto;
   }
 
   .header__burger-icon {
@@ -2253,6 +2255,7 @@ button,
   }
 
   .header__list--no-js {
+    position: relative;
     display: block;
     height: auto;
   }

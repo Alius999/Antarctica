@@ -66,6 +66,8 @@
     position: absolute;
     flex-direction: column;
     background: $color-default-white;
+    overflow-y: scroll;
+    overflow-x: auto;
   }
 }
 
@@ -137,6 +139,7 @@
 .header__list--no-js {
 
   @include vp-767 {
+    position: relative;
     display: block;
     height: auto;
   }

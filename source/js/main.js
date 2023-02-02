@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import JustValidate from './just-validate.es';
+// import IMask from './imask';
 
 // ---------------------------------
 
@@ -27,6 +28,32 @@ const headerList = document.querySelector('.header__list');
 const headerLogo = document.querySelector('.header__logo');
 const overlay = document.querySelector('.overlay');
 const mainHtml = document.querySelector('.page');
+const menuLinkCollection = document.querySelectorAll('.header__link');
+
+// Настройки поведения мобильного меню при переходе по ссылкам
+
+if (window.matchMedia('(max-width: 767px)').matches) {
+  menuLinkCollection.forEach((link) => {
+    link.addEventListener('click', () => {
+      burgerIconClose.style.display = 'none';
+      burgerIconOpen.style.display = 'block';
+      headerList.style.display = 'none';
+      headerLogo.style.fill = '#F9FBFD';
+      headerLogo.style.marginLeft = 0;
+      overlay.classList.add('visually-hidden');
+      mainHtml.classList.remove('page__hidden');
+    })
+  })
+}
+
+// Маска телефона
+
+// var element = document.querySelector('.booking-form__phone-number');
+// var maskOptions = {
+//   mask: '+{7}(000)000-00-00',
+//   minLength: 5,
+// };
+// var mask = IMask(element, maskOptions);
 
 // If JS disabled
 
